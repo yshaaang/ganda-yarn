@@ -1,15 +1,20 @@
-import styles from './style';
-import {
-  SiteHeader,
-  Navbar,
-  Hero,
-  Services,
-  Footer,
-  Featured,
-} from './components';
+import Layout from './Layout';
+import { Home, About, Contact, Products } from './pages';
+import { Routes, Route } from 'react-router-dom';
 
 const App = () => (
-  <div className='bg-[#dbf1fe] w-full overflow-hidden'>
+  <div>
+    <Routes>
+      <Route path='/' element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path='products' element={<Products />} />
+        <Route path='about' element={<About />} />
+        <Route path='contact' element={<Contact />} />
+      </Route>
+    </Routes>
+  </div>
+
+  /*<div className='bg-[#dbf1fe] w-full overflow-hidden'>
     <div className='bg-[#eff6ff] w-full overflow-hidden'>
       <div className={styles.paddingX}>
         <div className={styles.flexStart}>
@@ -65,7 +70,7 @@ const App = () => (
         </div>
       </div>
     </div>
-  </div>
+              </div>  */
 );
 
 export default App;

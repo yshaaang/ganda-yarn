@@ -29,18 +29,22 @@ export const headLinks = [
 export const navLinks = [
   {
     id: 'home',
+    path: '',
     title: 'Home',
   },
   {
     id: 'products',
+    path: 'products',
     title: 'Products',
   },
   {
     id: 'about',
+    path: 'about',
     title: 'About',
   },
   {
     id: 'contact',
+    path: 'contact',
     title: 'Contact',
   },
 ];
