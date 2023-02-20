@@ -1,12 +1,10 @@
 import styles from '../style';
-import {
-  baguettebags_brown,
-  bandana_lightblue,
-  cardigan_blue,
-  flower_multiplesunflowerbouquet,
-  totebag_brown,
-  tumblerholder_beige,
-} from '../assets';
+import { baguettebags_brown } from '../assets/gy_products/Baguette Bags';
+import { Nimbus_Cardigan_croptop } from '../assets/gy_products/Cardigan';
+import { bandana_lightblue } from '../assets/gy_products/Bandana';
+import { Flora_Tote_Bag_pastel_brown } from '../assets/gy_products/Tote Bags';
+import { tumblerholder_beige } from '../assets/gy_products/Tumbler Holder';
+import { flower_multiplesunflowerbouquet } from '../assets/gy_products/Flowers/Sunflower';
 
 const Featured = () => (
   <section
@@ -23,11 +21,11 @@ const Featured = () => (
     </div>
 
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
-      <div className='card h-70 w-64 shadow-md rounded-xl mr-7 mb-7 border border-[#d9d9d9]'>
+      <div className='card h-70 w-64 shadow-md rounded-xl mr-7 mb-7 border border-[#d9d9d9] cursor-pointer'>
         <figure>
           <img
-            src={cardigan_blue}
-            className='h-[340px]'
+            src={Nimbus_Cardigan_croptop}
+            className='h-[340px] hover:opacity-75'
             alt='nimbus cardigan'
           />
         </figure>
@@ -58,11 +56,11 @@ const Featured = () => (
         </div>
       </div>
 
-      <div className='card h-70 w-64 shadow-md rounded-xl mr-7 mb-7 border border-[#d9d9d9]'>
+      <div className='card h-70 w-64 shadow-md rounded-xl mr-7 mb-7 border border-[#d9d9d9] cursor-pointer'>
         <figure>
           <img
             src={baguettebags_brown}
-            className='h-[340px]'
+            className='h-[340px] hover:opacity-75'
             alt='baguette bag'
           />
         </figure>
@@ -93,9 +91,13 @@ const Featured = () => (
         </div>
       </div>
 
-      <div className='card h-70 w-64 shadow-md rounded-xl mr-7 mb-7 border border-[#d9d9d9]'>
+      <div className='card h-70 w-64 shadow-md rounded-xl mr-7 mb-7 border border-[#d9d9d9] cursor-pointer'>
         <figure>
-          <img src={bandana_lightblue} className='h-[340px]' alt='bandana' />
+          <img
+            src={bandana_lightblue}
+            className='h-[340px] hover:opacity-75'
+            alt='bandana'
+          />
         </figure>
         <div className='card-body'>
           <h2 className='card-title text-[#000000]'>Bandana</h2>
@@ -124,9 +126,13 @@ const Featured = () => (
         </div>
       </div>
 
-      <div className='card h-70 w-64 shadow-md rounded-xl mr-7 mb-7 border border-[#d9d9d9]'>
+      <div className='card h-70 w-64 shadow-md rounded-xl mr-7 mb-7 border border-[#d9d9d9] cursor-pointer'>
         <figure>
-          <img src={totebag_brown} className='h-[340px]' alt='tote bag' />
+          <img
+            src={Flora_Tote_Bag_pastel_brown}
+            className='h-[340px] hover:opacity-75'
+            alt='tote bag'
+          />
         </figure>
         <div className='card-body'>
           <h2 className='card-title text-[#000000]'>Tote Bag</h2>
@@ -155,11 +161,11 @@ const Featured = () => (
         </div>
       </div>
 
-      <div className='card h-70 w-64 shadow-md rounded-xl mr-7 mb-7 border border-[#d9d9d9]'>
+      <div className='card h-70 w-64 shadow-md rounded-xl mr-7 mb-7 border border-[#d9d9d9] cursor-pointer'>
         <figure>
           <img
             src={tumblerholder_beige}
-            className='h-[340px]'
+            className='h-[340px] hover:opacity-75'
             alt='tumbler holder'
           />
         </figure>
@@ -190,11 +196,11 @@ const Featured = () => (
         </div>
       </div>
 
-      <div className='card h-70 w-64 shadow-md rounded-xl mr-7 mb-7 border border-[#d9d9d9]'>
+      <div className='card h-70 w-64 shadow-md rounded-xl mr-7 mb-7 border border-[#d9d9d9] cursor-pointer'>
         <figure>
           <img
             src={flower_multiplesunflowerbouquet}
-            className='h-[340px]'
+            className='h-[340px] hover:opacity-75'
             alt='multiple sunflower'
           />
         </figure>

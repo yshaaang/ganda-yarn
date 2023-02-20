@@ -1,8 +1,8 @@
 import styles from '../style';
 import { Hero, Services, Featured } from '../components';
 
-const Home = () => {
-  return (
+const Home = () => (
+  <section id='products' className={`flex md:flex-row flex-col`}>
     <div className='bg-[#dbf1fe] w-full overflow-hidden'>
       <div className={styles.flexStart}>
         <div className={styles.boxWidth}>
@@ -30,7 +30,7 @@ const Home = () => {
         </div>
       </div>
     </div>
-  );
-};
+  </section>
+);
 
 export default Home;

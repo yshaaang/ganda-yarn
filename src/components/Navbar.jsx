@@ -8,7 +8,9 @@ const Navbar = () => {
 
   return (
     <nav className='w-full flex py-6 justify-between items-center navbar'>
-      <img src={logo} alt='hoobank' className='w-[124-px] h-[32px]' />
+      <Link to='/'>
+        <img src={logo} alt='ganda yarn' className='w-[124-px] h-[32px]' />
+      </Link>
       <ul className='list-none sm:flex hidden justify-center items-center flex-1'>
         {navLinks.map((nav, index) => (
           <li
@@ -98,7 +100,7 @@ const Navbar = () => {
         <img
           src={toggle ? close : menu}
           alt='menu toggle'
-          className='w-[28px] h-[28px] object-contain'
+          className='w-[28px] h-[28px] object-contain cursor-pointer'
           onClick={() => setToggle((prev) => !prev)}
         />
 
@@ -106,6 +108,7 @@ const Navbar = () => {
           className={`${
             toggle ? 'flex' : 'hidden'
           } p-6 bg-[#60a5fa] absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+          style={{ zIndex: 1 }}
         >
           <ul className='list-none flex flex-col justify-center items-center flex-1'>
             {navLinks.map((nav, index) => (
@@ -114,6 +117,7 @@ const Navbar = () => {
                 className={`font-poppins font-normal cursor-pointer text-[16px] text-black ${
                   index === navLinks.length - 1 ? 'mr-0' : 'mb-4'
                 }`}
+                onClick={() => setToggle(false)}
               >
                 <Link to={`/${nav.path}`}>{nav.title}</Link>
               </li>

@@ -1,6 +1,23 @@
 import Layout from './Layout';
 import { Home, About, Contact, Products } from './pages';
 import { Routes, Route } from 'react-router-dom';
+import BaguetteBags from './pages/Product_Categories/BaguetteBags';
+import {
+  Bandana,
+  BucketHats,
+  Cardigan,
+  Earrings,
+  Flowers,
+  HandSanitizerHolder,
+  Keychains,
+  LipBalmHolder,
+  PhoneHolder,
+  SprayBottleHolder,
+  ToteBags,
+  TumblerHolder,
+  Wallets,
+} from './pages/Product_Categories';
+import { CreateAnAccount, Login } from './components';
 
 const App = () => (
   <div>
@@ -10,67 +27,32 @@ const App = () => (
         <Route path='products' element={<Products />} />
         <Route path='about' element={<About />} />
         <Route path='contact' element={<Contact />} />
+
+        <Route path='category_baguette_bags' element={<BaguetteBags />} />
+        <Route path='category_bandana' element={<Bandana />} />
+        <Route path='category_bucket_hats' element={<BucketHats />} />
+        <Route path='category_cardigan' element={<Cardigan />} />
+        <Route path='category_earrings' element={<Earrings />} />
+        <Route path='category_flowers' element={<Flowers />} />
+        <Route
+          path='category_hand_sanitizer_holder'
+          element={<HandSanitizerHolder />}
+        />
+        <Route path='category_keychains' element={<Keychains />} />
+        <Route path='category_lip_balm_holder' element={<LipBalmHolder />} />
+        <Route path='category_phone_holder' element={<PhoneHolder />} />
+        <Route
+          path='category_spray_bottle_holder'
+          element={<SprayBottleHolder />}
+        />
+        <Route path='category_tote_bags' element={<ToteBags />} />
+        <Route path='category_tumbler_holder' element={<TumblerHolder />} />
+        <Route path='category_wallets' element={<Wallets />} />
+        <Route path='create_an_account' element={<CreateAnAccount />} />
+        <Route path='login' element={<Login />} />
       </Route>
     </Routes>
   </div>
-
-  /*<div className='bg-[#dbf1fe] w-full overflow-hidden'>
-    <div className='bg-[#eff6ff] w-full overflow-hidden'>
-      <div className={styles.paddingX}>
-        <div className={styles.flexStart}>
-          <div className={styles.boxWidth}>
-            <SiteHeader />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div className='bg-[#ffffff] w-full overflow-hidden'>
-      <div className={styles.paddingX}>
-        <div className={styles.flexCenter}>
-          <div className={styles.boxWidth}>
-            <Navbar />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div className={styles.flexStart}>
-      <div className={styles.boxWidth}>
-        <Hero />
-      </div>
-    </div>
-
-    <div className='bg-[#ffffff] w-full overflow-hidden'>
-      <div className={styles.paddingX}>
-        <div className={styles.flexStart}>
-          <div className={styles.boxWidth}>
-            <Services />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div className='bg-[#ffffff] w-full overflow-hidden'>
-      <div className={styles.paddingX}>
-        <div className={styles.flexStart}>
-          <div className={styles.boxWidth}>
-            <Featured />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div className='bg-[#161415] w-full overflow-hidden'>
-      <div className={styles.paddingX}>
-        <div className={styles.flexStart}>
-          <div className={styles.boxWidth}>
-            <Footer />
-          </div>
-        </div>
-      </div>
-    </div>
-              </div>  */
 );
 
 export default App;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { headLinks } from '../constants';
+import { Link } from 'react-router-dom';
 
 const SiteHeader = () => {
   return (
@@ -12,7 +13,7 @@ const SiteHeader = () => {
               index === headLinks.length - 1 ? 'mr-0' : 'mr-10'
             }`}
           >
-            <a href={'#${nav.id}'}>{nav.title}</a>
+            <Link to={`/${nav.path}`}>{nav.title}</Link>
           </li>
         ))}
       </ul>
@@ -26,7 +27,7 @@ const SiteHeader = () => {
                 index === headLinks.length - 1 ? 'mr-0' : 'mr-5'
               }`}
             >
-              <a href={'#${nav.id}'}>{nav.title}</a>
+              <Link to={`/${nav.path}`}>{nav.title}</Link>
             </li>
           ))}
         </ul>

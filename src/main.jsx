@@ -7,6 +7,7 @@ import {
   BrowserRouter,
 } from 'react-router-dom';
 import './index.css';
+import ScrollToTop from './ScrollToTop';
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      {/* <RouterProvider router={router} /> */}
+      <ScrollToTop />
       <App />
     </BrowserRouter>
   </React.StrictMode>

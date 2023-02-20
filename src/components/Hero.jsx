@@ -1,5 +1,6 @@
 import styles from '../style';
 import { homebg } from '../assets';
+import { Link } from 'react-router-dom';
 
 const Hero = () => (
   <section id='home' className={`flex md:flex-row flex-col`}>
@@ -23,9 +24,11 @@ const Hero = () => (
         </p>
 
         <div className='pt-8'>
-          <button className='btn btn-secondary btn-wide rounded-full'>
-            Shop Now
-          </button>
+          <Link to='/products'>
+            <button className='btn btn-secondary btn-wide rounded-full'>
+              Shop Now
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,27 +1,14 @@
-import {
-  people01,
-  people02,
-  people03,
-  facebook,
-  instagram,
-  linkedin,
-  twitter,
-  airbnb,
-  binance,
-  coinbase,
-  dropbox,
-  send,
-  shield,
-  star,
-} from '../assets';
+import { facebook, instagram, linkedin, twitter } from '../assets';
 
 export const headLinks = [
   {
     id: 'signup',
+    path: 'create_an_account',
     title: 'CREATE AN ACCOUNT',
   },
   {
     id: 'login',
+    path: 'login',
     title: 'LOGIN',
   },
 ];
@@ -49,30 +36,80 @@ export const navLinks = [
   },
 ];
 
-export const features = [
+export const ProdCategories = [
   {
-    id: 'feature-1',
-    icon: star,
-    title: 'Rewards',
-    content:
-      'The best credit cards offer some tantalizing combinations of promotions and prizes',
+    id: 'category_baguette_bags',
+    path: 'category_baguette_bags',
+    title: 'Baguette Bags',
   },
   {
-    id: 'feature-2',
-    icon: shield,
-    title: '100% Secured',
-    content:
-      'We take proactive steps make sure your information and transactions are secure.',
+    id: 'category_bandana',
+    path: 'category_bandana',
+    title: 'Bandana',
   },
   {
-    id: 'feature-3',
-    icon: send,
-    title: 'Balance Transfer',
-    content:
-      'A balance transfer credit card can save you a lot of money in interest charges.',
+    id: 'category_bucket_hatss',
+    path: 'category_bucket_hats',
+    title: 'Bucket Hats',
+  },
+  {
+    id: 'category_cardigan',
+    path: 'category_cardigan',
+    title: 'Cardigan',
+  },
+  {
+    id: 'category_earrings',
+    path: 'category_earrings',
+    title: 'Earrings',
+  },
+  {
+    id: 'category_flowers',
+    path: 'category_flowers',
+    title: 'Flowers',
+  },
+  {
+    id: 'category_hand_sanitizer_holder',
+    path: 'category_hand_sanitizer_holder',
+    title: 'Hand Sanitizer Holder',
+  },
+  {
+    id: 'category_keychains',
+    path: 'category_keychains',
+    title: 'Keychains',
+  },
+  {
+    id: 'category_lip_balm_holder',
+    path: 'category_lip_balm_holder',
+    title: 'Lip Balm Holder',
+  },
+  {
+    id: 'category_phone_holder',
+    path: 'category_phone_holder',
+    title: 'Phone Holder',
+  },
+  {
+    id: 'category_spray_bottle_holder',
+    path: 'category_spray_bottle_holder',
+    title: 'Spray Bottle Holder',
+  },
+  {
+    id: 'category_tote_bags',
+    path: 'category_tote_bags',
+    title: 'Tote Bags',
+  },
+  {
+    id: 'category_tumbler_holder',
+    path: 'category_tumbler_holder',
+    title: 'Tumbler Holder',
+  },
+  {
+    id: 'category_wallets',
+    path: 'category_wallets',
+    title: 'Wallets',
   },
 ];
 
+/**
 export const feedback = [
   {
     id: 'feedback-1',
@@ -98,25 +135,7 @@ export const feedback = [
     title: 'Founder & Leader',
     img: people03,
   },
-];
-
-export const stats = [
-  {
-    id: 'stats-1',
-    title: 'User Active',
-    value: '3800+',
-  },
-  {
-    id: 'stats-2',
-    title: 'Trusted by Company',
-    value: '230+',
-  },
-  {
-    id: 'stats-3',
-    title: 'Transaction',
-    value: '$230M+',
-  },
-];
+];  */
 
 export const footerLinks = [
   {
@@ -124,23 +143,23 @@ export const footerLinks = [
     links: [
       {
         name: 'Content',
-        link: 'https://www.hoobank.com/content/',
+        link: 'https://www.gandayarn.com/content/',
       },
       {
         name: 'How it Works',
-        link: 'https://www.hoobank.com/how-it-works/',
+        link: 'https://www.gandayarn.com/how-it-works/',
       },
       {
         name: 'Create',
-        link: 'https://www.hoobank.com/create/',
+        link: 'https://www.gandayarn.com/create/',
       },
       {
         name: 'Explore',
-        link: 'https://www.hoobank.com/explore/',
+        link: 'https://www.gandayarn.com/explore/',
       },
       {
         name: 'Terms & Services',
-        link: 'https://www.hoobank.com/terms-and-services/',
+        link: 'https://www.gandayarn.com/terms-and-services/',
       },
     ],
   },
@@ -149,23 +168,23 @@ export const footerLinks = [
     links: [
       {
         name: 'Help Center',
-        link: 'https://www.hoobank.com/help-center/',
+        link: 'https://www.gandayarn.com/help-center/',
       },
       {
         name: 'Partners',
-        link: 'https://www.hoobank.com/partners/',
+        link: 'https://www.gandayarn.com/partners/',
       },
       {
         name: 'Suggestions',
-        link: 'https://www.hoobank.com/suggestions/',
+        link: 'https://www.gandayarn.com/suggestions/',
       },
       {
         name: 'Blog',
-        link: 'https://www.hoobank.com/blog/',
+        link: 'https://www.gandayarn.com/blog/',
       },
       {
         name: 'Newsletters',
-        link: 'https://www.hoobank.com/newsletters/',
+        link: 'https://www.gandayarn.com/newsletters/',
       },
     ],
   },
@@ -174,11 +193,11 @@ export const footerLinks = [
     links: [
       {
         name: 'Our Partner',
-        link: 'https://www.hoobank.com/our-partner/',
+        link: 'https://www.gandayarn.com/our-partner/',
       },
       {
         name: 'Become a Partner',
-        link: 'https://www.hoobank.com/become-a-partner/',
+        link: 'https://www.gandayarn.com/become-a-partner/',
       },
     ],
   },
@@ -204,24 +223,5 @@ export const socialMedia = [
     id: 'social-media-4',
     icon: linkedin,
     link: 'https://www.linkedin.com/',
-  },
-];
-
-export const clients = [
-  {
-    id: 'client-1',
-    logo: airbnb,
-  },
-  {
-    id: 'client-2',
-    logo: binance,
-  },
-  {
-    id: 'client-3',
-    logo: coinbase,
-  },
-  {
-    id: 'client-4',
-    logo: dropbox,
   },
 ];
