@@ -138,3 +138,261 @@
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
 }
+
+
+
+
+body{
+
+    background: linear-gradient(
+      157.81deg,
+      #def9fa -43.27%,
+      #bef3f5 -21.24%,
+      #9dedf0 12.19%,
+      #7de7eb 29.82%,
+      #5ce1e6 51.94%,
+      #33bbcf 90.29%
+  
+  
+  );
+}
+
+/*=======================
+adding style to about-1 
+=======================*/
+
+.about-1{
+  margin: 30px;
+  padding: 5px;
+}
+.about-1 h1{
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  
+}
+.about-1 p{
+  text-align: justify;
+  padding: 3px;
+  color: black;
+}
+
+/*===========================
+adding style to about items 
+============================*/
+
+.about-item{
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: #f0f1f1;
+  padding: 80px 30px;
+  box-shadow: 0 0 9px rgba(0,0,0.6);
+  text-align: left;
+}
+
+
+
+/*======================================
+adding style to h3(heading 3) of each item 
+=========================================*/
+.about-item h3{
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+/*======================================
+styling the hr (the blue line in between)
+=========================================*/
+.about-item hr{
+  width: 46px;
+  height: 3px;
+  background-color: #5fbff9;
+  margin: 0 auto;
+  border: none;
+  text-align: left;
+}
+
+/*========================================
+hover means when you put your cursor over it
+=========================================*/
+.about-item:hover{
+  background-color: #5fbff9;
+}
+.about-item:hover i,
+.about-item:hover h3,
+.about-item:hover p{
+  color: #fff;
+}
+.about-item:hover hr{
+  background-color: #fff;
+}
+
+/*==============================================================================
+translate Y: move along the Y axis, negative(-20) moves it up, while positive(20) moves in down by  
+================================================================================*/
+.about-item:hover i{
+  transform: translateY(-20px);
+}
+.about-item:hover i,
+.about-item:hover h3,
+.about-item:hover hr{
+  transition: all 400ms ease-in-out;
+}
+
+.icons{
+   height: 50px;
+   width: 60px;
+   margin-bottom: 10px;
+   
+}
+/*=================*/
+
+
+
+.container{
+  width: 250%;
+ height: 250%;
+
+}
+.container .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .content .left-side{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+}
+.content .left-side::before{
+  content: '';
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #080808;
+}
+.content .left-side .details{
+  margin: 14px;
+  text-align: center;
+}
+.content .left-side .details i{
+  font-size: 30px;
+  color: #050505;
+  margin-bottom: 10px;
+}
+.content .left-side .details .topic{
+  font-size: 18px;
+  font-weight: 500;
+  color: #050505;
+}
+.content .left-side .details .text-one,
+.content .left-side .details .text-two{
+  font-size: 14px;
+  color:#080808;
+}
+.container .content .right-side{
+  width: 75%;
+  margin-left: 75px;
+}
+.content .right-side .topic-text{
+  font-size: 23px;
+  font-weight: 600;
+  color: #030303;
+  margin-top: 12px;
+}
+.content .right-side .sub-text{
+
+  color: #9ca3af;
+  
+}
+.right-side .input-box{
+  height: 60px;
+  width: 100%;
+  margin: 15px 0;
+}
+.right-side .message-box{
+  height: 100px;
+  width: 100%;
+  margin: 12px 0;
+}
+.right-side .input-box input,
+.right-side .input-box textarea{
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #F0F1F8;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+}
+.right-side .message-box{
+  min-height: 110px;
+
+}
+.right-side .input-box textarea{
+  padding-top: 6px;
+  height: 200%;
+}
+.right-side .button{
+  display: inline-block;
+  margin-top: 12px;
+  margin-bottom: 15px;
+}
+.right-side .button input[type="button"]{
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #3e2093;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button input[type="button"]:hover{
+  background: #5029bc;
+
+}
+
+.icon1{
+
+  margin-left: 100px;
+  height: 30px;
+  width: 30%;
+   text-align: center;
+    color: black;
+    font-weight: bold;
+  
+}
+
+.icon2{
+
+  margin-left: 40px;
+  height: 30px;
+  width: 30%;
+   text-align: center;
+    color: black;
+    font-weight: bold;
+  
+}
+.icon3{
+
+  margin-left: 60px;
+  height: 30px;
+  width: 30%;
+   text-align: center;
+    color: black;
+    font-weight: bold;
+  
+}
