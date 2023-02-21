@@ -1,11 +1,12 @@
 import React from 'react';
+import styles from '../style';
 
 import { FiMapPin, FiPhoneCall, FiMail } from 'react-icons/fi';
 
 const Contact = () => {
   return (
     <div className='bg-[#dbf1fe] w-full overflow-hidden'>
-      <div className='mx-auto'>
+      <div className='mx-auto '>
         <div class='container py-8 mx-auto lg:max-w-7xl px-4 sm:px-6 lg:px-20'>
           <div class='content'>
             <div class='left-side'>

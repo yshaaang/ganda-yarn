@@ -17,7 +17,8 @@ import {
   TumblerHolder,
   Wallets,
 } from './pages/Product_Categories';
-import { CreateAnAccount, Login } from './components';
+import { CreateAnAccount, Login, ShoppingCart } from './components';
+import SlideCart from './components/SlideCart';
 
 const App = () => (
   <div>
@@ -48,6 +49,10 @@ const App = () => (
         <Route path='category_tote_bags' element={<ToteBags />} />
         <Route path='category_tumbler_holder' element={<TumblerHolder />} />
         <Route path='category_wallets' element={<Wallets />} />
+
+        <Route path='slidecart' element={<SlideCart />} />
+        <Route path='shopping_cart' element={<ShoppingCart />} />
+
         <Route path='create_an_account' element={<CreateAnAccount />} />
         <Route path='login' element={<Login />} />
       </Route>

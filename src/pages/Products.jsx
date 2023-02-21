@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom';
 
 const Products = () => {
   return (
-    <div className='bg-[#dbf1fe] w-full overflow-hidden'>
+    <div className='bg-white w-full overflow-hidden'>
       <div class='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div class='mx-auto max-w-2xl py-8 sm:py-15 lg:max-w-none lg:py-6'>
           <h2 class='text-2xl font-bold text-gray-900'>Collections</h2>
