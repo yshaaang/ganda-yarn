@@ -94,8 +94,8 @@ const About = () => {
                       to have already achieved several milestones and
                       accomplishments. These include:
                       <p>
-                        1. <b>Building a loyal customer base:</b> We are
-                        grateful to have a growing community of customers who
+                        1. <b>Building a loyal customer base:</b>{' '}
+                        We are grateful to have a growing community of customers who
                         appreciate the quality and craftsmanship of our handmade
                         crochet products. We've received positive feedback and
                         testimonials, which motivates us to continue providing
@@ -110,15 +110,15 @@ const About = () => {
                         responsible.
                       </p>
                       <p>
-                        3. <b>Supporting local artisans:</b> We have partnered
-                        with skilled artisans who specialize in handmade crochet
+                        3. <b>Supporting local artisans:</b>{' '}
+                        We have partnered with skilled artisans who specialize in handmade crochet
                         to create our unique products. By collaborating with
                         these artisans, we support their livelihoods and help
                         preserve the art of handmade crochet.
                       </p>
                       <p>
-                        4. <b>Continuous growth:</b>We have been expanding our
-                        product range and are continuously seeking new and
+                        4. <b>Continuous growth:</b>{' '}
+                        We have been expanding our product range and are continuously seeking new and
                         innovative ways to bring handmade crochet products to
                         our customers.
                       </p>
