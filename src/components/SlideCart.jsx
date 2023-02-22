@@ -118,7 +118,7 @@ export default function SlideCart() {
                                     <div className='flex'>
                                       <button
                                         type='button'
-                                        className='font-medium text-indigo-600 hover:text-indigo-500'
+                                        className='font-medium text-[#dc2626] hover:text-[#f87171]'
                                       >
                                         Remove
                                       </button>
@@ -145,16 +145,44 @@ export default function SlideCart() {
                           to='/shopping_cart'
                           className='flex items-center justify-center rounded-md border border-[#ff55ee] bg-white px-6 py-3 text-base font-medium text-[#ff55ee] shadow-sm hover:bg-[#e879f9] hover:text-white'
                         >
+                          <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            fill='none'
+                            viewBox='0 0 24 24'
+                            strokeWidth={1.5}
+                            stroke='currentColor'
+                            className='w-6 h-6 mr-2'
+                          >
+                            <path
+                              strokeLinecap='round'
+                              strokeLinejoin='round'
+                              d='M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z'
+                            />
+                          </svg>
                           View Cart
                         </Link>
                       </div>
                       <div className='mt-3'>
-                        <a
-                          href='#'
+                        <Link
+                          to='/checkout_item'
                           className='flex items-center justify-center rounded-md border border-transparent bg-[#ff55ee] px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-[#e879f9]'
                         >
+                          <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            fill='none'
+                            viewBox='0 0 24 24'
+                            strokeWidth={1.5}
+                            stroke='currentColor'
+                            className='w-6 h-6 mr-2'
+                          >
+                            <path
+                              strokeLinecap='round'
+                              strokeLinejoin='round'
+                              d='M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3'
+                            />
+                          </svg>
                           Checkout
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>

@@ -1,0 +1,428 @@
+import React from 'react';
+import { baguettebags_brown } from '../assets/gy_products/Baguette Bags';
+import QuantitySelector from './QuantitySelector';
+import { Link } from 'react-router-dom';
+import RadioWithLabel from './RadioWithLabel';
+
+const Checkout = () => {
+  return (
+    <div className='bg-white w-full overflow-hidden'>
+      <div class='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+        <div class='mx-auto max-w-2xl py-8 sm:py-15 lg:max-w-none lg:py-6'>
+          <h2 class='text-2xl font-bold text-gray-900'>Checkout</h2>
+
+          <div className='bg-white border border-gray-300 rounded-lg mt-5'>
+            <div class='mx-auto max-w-2xl px-4 sm:pt-10 pb-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pt-16 lg:pb-10'>
+              <div class='lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8'></div>
+
+              <div class='mt-4 lg:row-span-3 lg:mt-0'>
+                <h2 class='sr-only'>Order Summary</h2>
+                <h1 class='text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl'>
+                  Order summary
+                </h1>
+
+                {/*Order Summary*/}
+                <div class='mt-6'>
+                  <h3 class='sr-only'>Order Summary</h3>
+
+                  {/** 1st Item */}
+                  <div className='avatar-container flex gap-3 border-b border-[#d1d5db] py-5'>
+                    <img
+                      className='h-[150px] w-[150px] mr-4 object-cover object-center'
+                      src={baguettebags_brown}
+                      alt=''
+                    />
+                    <div className='container'>
+                      <div className='flex justify-between'>
+                        <h2 className='font-bold text-black text-[15px]'>
+                          Baguette Bag
+                        </h2>
+                        <h2 className='font-bold text-black text-[15px]'>
+                          ₱300
+                        </h2>
+                      </div>
+                      <div className='flex gap-2 mt-2'>
+                        <p class='font-poppins text-[12px]'>Variations:</p>
+                        <div className='dropdown dropdown-right'>
+                          <label
+                            tabIndex={0}
+                            className='btn btn-circle btn-ghost btn-xs text-info'
+                          >
+                            <svg
+                              xmlns='http://www.w3.org/2000/svg'
+                              fill='none'
+                              viewBox='0 0 24 24'
+                              strokeWidth={1.5}
+                              stroke='black'
+                              className='w-6 h-6'
+                            >
+                              <path
+                                strokeLinecap='round'
+                                strokeLinejoin='round'
+                                d='M19.5 8.25l-7.5 7.5-7.5-7.5'
+                              />
+                            </svg>
+                          </label>
+                          <ul
+                            tabIndex={0}
+                            className='dropdown-content menu p-2 shadow bg-white rounded-box w-52'
+                          >
+                            <li>
+                              <a>Pink</a>
+                            </li>
+                            <li>
+                              <a>Brown</a>
+                            </li>
+                            <li>
+                              <a>Violet</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <p className='font-poppins text-[12px]'>Brown</p>
+                      <p className='text-black text-sm  text-justify '></p>
+                      <div className='flex justify-between mt-3'>
+                        <QuantitySelector />
+                        <h2 className='font-bold text-[#dc2626] text-sm mt-9 hover:text-[#f87171] cursor-pointer'>
+                          Remove
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/** 2nd Item */}
+                  <div className='avatar-container flex gap-3 border-b border-[#d1d5db] py-5'>
+                    <img
+                      className='h-[150px] w-[150px] mr-4 object-cover object-center'
+                      src={baguettebags_brown}
+                      alt=''
+                    />
+                    <div className='container'>
+                      <div className='flex justify-between'>
+                        <h2 className='font-bold text-black text-[15px]'>
+                          Baguette Bag
+                        </h2>
+                        <h2 className='font-bold text-black text-[15px]'>
+                          ₱300
+                        </h2>
+                      </div>
+                      <div className='flex gap-2 mt-2'>
+                        <p class='font-poppins text-[12px]'>Variations:</p>
+                        <div className='dropdown dropdown-right'>
+                          <label
+                            tabIndex={0}
+                            className='btn btn-circle btn-ghost btn-xs text-info'
+                          >
+                            <svg
+                              xmlns='http://www.w3.org/2000/svg'
+                              fill='none'
+                              viewBox='0 0 24 24'
+                              strokeWidth={1.5}
+                              stroke='black'
+                              className='w-6 h-6'
+                            >
+                              <path
+                                strokeLinecap='round'
+                                strokeLinejoin='round'
+                                d='M19.5 8.25l-7.5 7.5-7.5-7.5'
+                              />
+                            </svg>
+                          </label>
+                          <ul
+                            tabIndex={0}
+                            className='dropdown-content menu p-2 shadow bg-white rounded-box w-52'
+                          >
+                            <li>
+                              <a>Pink</a>
+                            </li>
+                            <li>
+                              <a>Brown</a>
+                            </li>
+                            <li>
+                              <a>Violet</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <p className='font-poppins text-[12px]'>Brown</p>
+                      <p className='text-black text-sm  text-justify '></p>
+                      <div className='flex justify-between mt-3'>
+                        <QuantitySelector />
+                        <h2 className='font-bold text-[#dc2626] text-sm mt-9 hover:text-[#f87171] cursor-pointer'>
+                          Remove
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='flex items-center'>
+                    <div className='container flex justify-between gap-3 border-b border-[#d1d5db] py-4'>
+                      <p className='text-[#262626]'>Total (Items)</p>
+                      <p className='text-[#262626]'>₱300</p>
+                    </div>
+                  </div>
+                  <div class='flex items-center'>
+                    <div className='container flex justify-between gap-3 border-b border-[#d1d5db] py-4'>
+                      <p className='text-[#262626]'>Shipping Fee</p>
+                      <p className='text-[#262626]'>+50</p>
+                    </div>
+                  </div>
+
+                  <div class='flex items-center'>
+                    <div className='container flex justify-between gap-3 py-4'>
+                      <p className='text-black text-[20px] font-bold'>
+                        Order Total
+                      </p>
+                      <p className='text-[#262626] text-[20px] font-bold'>
+                        ₱350
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <Link to='/checkout_item'>
+                  <button
+                    type='submit'
+                    class='mt-10 gap-2 flex w-full items-center justify-center rounded-md border border-transparent bg-[#ff55ee] py-3 px-8 text-base font-medium text-white hover:bg-[#3eadcf] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
+                  >
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      strokeWidth={1.5}
+                      stroke='currentColor'
+                      className='w-6 h-6'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        d='M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59'
+                      />
+                    </svg>
+                    Place Order
+                  </button>
+                </Link>
+              </div>
+
+              <div class='lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8'>
+                {/* Description and details  */}
+
+                <div class='mt-10 sm:mt-0'>
+                  <div class='md:col-span-1'></div>
+                  <div class='mt-5 md:col-span-2 md:mt-0'>
+                    <form action='#' method='POST'>
+                      <div class='overflow-hidden border rounded-md'>
+                        <div class='bg-white px-4 py-5 sm:p-6'>
+                          <div className='py-3 text-left '>
+                            <h1 class='text-lg font-bold tracking-tight text-gray-900'>
+                              Shipping Information
+                            </h1>
+                          </div>
+
+                          <div class='grid grid-cols-6 gap-6 mb-5'>
+                            <div class='col-span-6 sm:col-span-3'>
+                              <label
+                                for='first-name'
+                                class='block text-sm font-medium text-gray-700'
+                              >
+                                First name
+                              </label>
+                              <input
+                                type='text'
+                                name='first-name'
+                                id='first-name'
+                                autocomplete='given-name'
+                                class='mt-1 bg-white px-2 h-[35px] block w-full rounded-md border border-gray-300 shadow-smfocus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
+                              />
+                            </div>
+
+                            <div class='col-span-6 sm:col-span-3'>
+                              <label
+                                for='last-name'
+                                class='block text-sm font-medium text-gray-700'
+                              >
+                                Last name
+                              </label>
+                              <input
+                                type='text'
+                                name='last-name'
+                                id='last-name'
+                                autocomplete='family-name'
+                                class='mt-1 bg-white px-2 h-[35px] block w-full rounded-md border border-gray-300 shadow-sm focus:border-black focus:ring-black sm:text-sm'
+                              />
+                            </div>
+
+                            <div class='col-span-6 sm:col-span-6'>
+                              <label
+                                for='email-address'
+                                class='block text-sm font-medium text-gray-700'
+                              >
+                                Email address
+                              </label>
+                              <input
+                                type='text'
+                                name='email-address'
+                                id='email-address'
+                                autocomplete='email'
+                                class='mt-1 bg-white px-2 h-[35px] block w-full rounded-md border border-gray-300 shadow-sm focus:border-black focus:ring-black sm:text-sm'
+                              />
+                            </div>
+
+                            <div class='col-span-6 sm:col-span-3'>
+                              <label
+                                for='first-name'
+                                class='block text-sm font-medium text-gray-700'
+                              >
+                                Phone Number (+63)
+                              </label>
+                              <input
+                                type='text'
+                                name='first-name'
+                                id='first-name'
+                                autocomplete='given-name'
+                                class='mt-1 bg-white px-2 h-[35px] block w-full rounded-md border border-gray-300 shadow-smfocus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
+                              />
+                            </div>
+
+                            <div class='col-span-6'>
+                              <label
+                                for='street-address'
+                                class='block text-sm font-medium text-gray-700'
+                              >
+                                House Number
+                              </label>
+                              <input
+                                type='text'
+                                name='street-address'
+                                id='street-address'
+                                autocomplete='street-address'
+                                class='mt-1 bg-white px-2 h-[35px] block w-full rounded-md border border-gray-300 shadow-sm focus:border-black focus:ring-black sm:text-sm'
+                              />
+                            </div>
+
+                            <div class='col-span-6'>
+                              <label
+                                for='street-address'
+                                class='block text-sm font-medium text-gray-700'
+                              >
+                                Street address
+                              </label>
+                              <input
+                                type='text'
+                                name='street-address'
+                                id='street-address'
+                                autocomplete='street-address'
+                                class='mt-1 bg-white px-2 h-[35px] block w-full rounded-md border border-gray-300 shadow-sm focus:border-black focus:ring-black sm:text-sm'
+                              />
+                            </div>
+
+                            <div class='col-span-6 sm:col-span-6 lg:col-span-2'>
+                              <label
+                                for='city'
+                                class='block text-sm font-medium text-gray-700'
+                              >
+                                City
+                              </label>
+                              <input
+                                type='text'
+                                name='city'
+                                id='city'
+                                autocomplete='address-level2'
+                                class='mt-1 bg-white px-2 h-[35px] block w-full rounded-md border border-gray-300 shadow-sm focus:border-black focus:ring-black sm:text-sm'
+                              />
+                            </div>
+
+                            <div class='col-span-6 sm:col-span-3 lg:col-span-2'>
+                              <label
+                                for='region'
+                                class='block text-sm font-medium text-gray-700'
+                              >
+                                State / Province
+                              </label>
+                              <input
+                                type='text'
+                                name='region'
+                                id='region'
+                                autocomplete='address-level1'
+                                class='mt-1 bg-white px-2 h-[35px] block w-full rounded-md border border-gray-300 shadow-sm focus:border-black focus:ring-black sm:text-sm'
+                              />
+                            </div>
+
+                            <div class='col-span-6 sm:col-span-3 lg:col-span-2'>
+                              <label
+                                for='postal-code'
+                                class='block text-sm font-medium text-gray-700'
+                              >
+                                ZIP / Postal code
+                              </label>
+                              <input
+                                type='text'
+                                name='postal-code'
+                                id='postal-code'
+                                autocomplete='postal-code'
+                                class='mt-1 bg-white px-2 h-[35px] block w-full rounded-md border border-gray-300 shadow-sm focus:border-black focus:ring-black sm:text-sm'
+                              />
+                            </div>
+                          </div>
+                          <div class=' sm:block' aria-hidden='true'>
+                            <div class='py-5'>
+                              <div class='border-t border-gray-200'>
+                                <div className='py-3 text-left '>
+                                  <h1 class='text-lg font-bold tracking-tight text-gray-900 mt-5'>
+                                    Shipping Method
+                                  </h1>
+                                </div>
+                                <div class='grid grid-cols-6 gap-6'>
+                                  <div class='col-span-6 sm:col-span-3'>
+                                    <div className='bg-white font-poppins font-medium text-[15px] text-black max-width h-[110px] border border-gray-300 rounded-md px-4 py-3 cursor-pointer'>
+                                      Standard Local
+                                      <p
+                                        className='text-gray-400 text-[13px] font-p
+                                       font-regular'
+                                      >
+                                        3-7 business days
+                                      </p>
+                                      <div className='py-5'>₱50</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class=' sm:block' aria-hidden='true'>
+                            <div class='py-5'>
+                              <div class='border-t border-gray-200'>
+                                <div className='py-3 text-left '>
+                                  <h1 class='text-lg font-bold tracking-tight text-gray-900 mt-5'>
+                                    Payment Method
+                                  </h1>
+                                </div>
+                                <div class=''>
+                                  <RadioWithLabel
+                                    label='Payment Method'
+                                    options={[
+                                      'GCash',
+                                      'PayPal',
+                                      'Cash On Delivery',
+                                    ]}
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Checkout;
