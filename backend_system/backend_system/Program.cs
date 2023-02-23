@@ -1,3 +1,4 @@
+using backend_system.Data;
 using backend_system.Services.AdminService;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IAdminService, AdminService>();
+builder.Services.AddDbContext<DataContext>();
 
 var app = builder.Build();
 

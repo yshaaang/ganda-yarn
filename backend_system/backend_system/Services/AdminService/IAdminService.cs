@@ -5,10 +5,10 @@ namespace backend_system.Services.AdminService
 {
     public interface IAdminService
     {
-        List<Admin> GetAllAdmins();
-        Admin? GetAdmin(int id);
-        List<Admin> AddAdmin(Admin admin);
-        List<Admin>? UpdateAdmin(int id, Admin request);
-        List<Admin>? DeleteAdmin(int id);
+        Task<List<Admin>> GetAllAdmins();
+        Task<Admin?> GetAdmin(int id);
+        Task<List<Admin>> AddAdmin(Admin admin);
+        Task<List<Admin>?> UpdateAdmin(int id, Admin request);
+        Task<List<Admin>?> DeleteAdmin(int id);
     }
 }

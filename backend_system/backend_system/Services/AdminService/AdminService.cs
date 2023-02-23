@@ -1,67 +1,56 @@
-﻿using backend_system.Models;
+﻿using backend_system.Data;
+using backend_system.Models;
 
 namespace backend_system.Services.AdminService
 {
     public class AdminService : IAdminService
     {
-        private static List<Admin> admins = new List<Admin>
-        {
-            new Admin
-            {
-                ID = 1,
-                Username = "admin",
-                Password = "thisisreallyauniquepassword",
-                FirstName = "Christian Roed",
-                LastName = "Boyles",
-                CreatedAt = DateTime.Now,
-                ModifiedAt = null
-            },
-            new Admin
-            {
-                ID = 2,
-                Username = "chrstnrdbyls",
-                Password = "GNDYRNpakmamsh",
-                FirstName = "Hanni",
-                LastName = "Pham",
-                CreatedAt = DateTime.Now,
-                ModifiedAt = null
-            }
-        };
+        private readonly DataContext _context;
 
-        public List<Admin> AddAdmin(Admin admin)
+        public AdminService(DataContext context)
         {
-            admins.Add(admin);
-            return admins;
+            _context = context;
         }
 
-        public List<Admin>? DeleteAdmin(int id)
+        public async Task<List<Admin>> AddAdmin(Admin admin)
         {
-            var admin = admins.Find(x => x.ID == id);
+            _context.Admins.Add(admin);
+            await _context.SaveChangesAsync();
+
+            return await _context.Admins.ToListAsync();
+        }
+
+        public async Task<List<Admin>?> DeleteAdmin(int id)
+        {
+            var admin = await _context.Admins.FindAsync(id);
             if (admin is null)
                 return null;
 
-            admins.Remove(admin);
+            _context.Admins.Remove(admin);
+            await _context.SaveChangesAsync();
 
-            return admins;
+            return await _context.Admins.ToListAsync();
         }
 
-        public Admin? GetAdmin(int id)
+        public async Task<Admin?> GetAdmin(int id)
         {
-            var admin = admins.Find(x => x.ID == id);
+            var admin = await _context.Admins.FindAsync(id);
             if (admin is null)
                 return null;
 
             return admin;
         }
 
-        public List<Admin> GetAllAdmins()
+        public async Task<List<Admin>> GetAllAdmins()
         {
+            var admins = await _context.Admins.ToListAsync();
+
             return admins;
         }
 
-        public List<Admin>? UpdateAdmin(int id, Admin request)
+        public async Task<List<Admin>?> UpdateAdmin(int id, Admin request)
         {
-            var admin = admins.Find(x => x.ID == id);
+            var admin = await _context.Admins.FindAsync(id);
             if (admin is null)
                 return null;
 
@@ -71,7 +60,9 @@ namespace backend_system.Services.AdminService
             admin.LastName = request.LastName;
             admin.ModifiedAt = DateTime.Now;
 
-            return admins;
+            await _context.SaveChangesAsync();
+
+            return await _context.Admins.ToListAsync();
         }
     }
 }

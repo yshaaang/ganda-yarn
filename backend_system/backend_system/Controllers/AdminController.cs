@@ -20,7 +20,7 @@ namespace backend_system.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<List<Admin>>> GetAllAdmins()
         {
-            return _adminService.GetAllAdmins();
+            return await _adminService.GetAllAdmins();
         }
 
         [HttpGet("{id:int}")]
@@ -28,7 +28,7 @@ namespace backend_system.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<Admin>> GetAdmin(int id)
         {
-            var result = _adminService.GetAdmin(id);
+            var result = await _adminService.GetAdmin(id);
             if (result is null)
                 return NotFound("Admin doesn't exist.");
 
@@ -39,7 +39,7 @@ namespace backend_system.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<List<Admin>>> AddAdmin([FromBody]Admin admin)
         {
-            var result = _adminService.AddAdmin(admin);
+            var result = await _adminService.AddAdmin(admin);
 
             return Ok(result);
         }
@@ -48,7 +48,7 @@ namespace backend_system.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<List<Admin>>> UpdateAdmin(int id, [FromBody]Admin request)
         {
-            var result = _adminService.UpdateAdmin(id, request);
+            var result = await _adminService.UpdateAdmin(id, request);
             if (result is null)
                 return NotFound("Admin doesn't exist.");
 
@@ -59,7 +59,7 @@ namespace backend_system.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<List<Admin>>> DeleteAdmin(int id)
         {
-            var result = _adminService.DeleteAdmin(id);
+            var result = await _adminService.DeleteAdmin(id);
             if (result is null)
                 return NotFound("Admin doesn't exist.");
 
