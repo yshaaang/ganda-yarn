@@ -1,11 +1,12 @@
-import React from 'react';
-import { baguettebags_brown } from '../assets/gy_products/Baguette Bags';
-import QuantitySelector from './QuantitySelector';
+import { React, useState } from 'react';
 import { Link } from 'react-router-dom';
 import RadioWithLabel from './RadioWithLabel';
 import { shoppingCart } from '../constants';
+import PlaceOrderModal from './PlaceOrderModal';
 
 const Checkout = () => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div className='bg-white w-full overflow-hidden'>
       <div class='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
@@ -103,26 +104,33 @@ const Checkout = () => {
                 </div>
 
                 <Link to='/checkout_item'>
-                  <button
-                    type='submit'
-                    class='mt-10 gap-2 flex w-full items-center justify-center rounded-md border border-transparent bg-[#ff55ee] py-3 px-8 text-base font-medium text-white hover:bg-[#3eadcf] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
-                  >
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      fill='none'
-                      viewBox='0 0 24 24'
-                      strokeWidth={1.5}
-                      stroke='currentColor'
-                      className='w-6 h-6'
+                  <div>
+                    <button
+                      onClick={() => setShowModal(true)}
+                      type='submit'
+                      class='mt-10 gap-2 flex w-full items-center justify-center rounded-md border border-transparent bg-[#ff55ee] py-3 px-8 text-base font-medium text-white hover:bg-[#3eadcf] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
                     >
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        d='M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59'
-                      />
-                    </svg>
-                    Place Order
-                  </button>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        fill='none'
+                        viewBox='0 0 24 24'
+                        strokeWidth={1.5}
+                        stroke='currentColor'
+                        className='w-6 h-6'
+                      >
+                        <path
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                          d='M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59'
+                        />
+                      </svg>
+                      Place Order
+                    </button>
+
+                    {showModal && (
+                      <PlaceOrderModal onClose={() => setShowModal(false)} />
+                    )}
+                  </div>
                 </Link>
               </div>
 
