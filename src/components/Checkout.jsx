@@ -3,6 +3,7 @@ import { baguettebags_brown } from '../assets/gy_products/Baguette Bags';
 import QuantitySelector from './QuantitySelector';
 import { Link } from 'react-router-dom';
 import RadioWithLabel from './RadioWithLabel';
+import { shoppingCart } from '../constants';
 
 const Checkout = () => {
   return (
@@ -25,146 +26,67 @@ const Checkout = () => {
                 <div class='mt-6'>
                   <h3 class='sr-only'>Order Summary</h3>
 
-                  {/** 1st Item */}
-                  <div className='avatar-container flex gap-3 border-b border-[#d1d5db] py-5'>
-                    <img
-                      className='h-[150px] w-[150px] mr-4 object-cover object-center'
-                      src={baguettebags_brown}
-                      alt=''
-                    />
-                    <div className='container'>
-                      <div className='flex justify-between'>
-                        <h2 className='font-bold text-black text-[15px]'>
-                          Baguette Bag
-                        </h2>
-                        <h2 className='font-bold text-black text-[15px]'>
-                          ₱300
-                        </h2>
-                      </div>
-                      <div className='flex gap-2 mt-2'>
-                        <p class='font-poppins text-[12px]'>Variations:</p>
-                        <div className='dropdown dropdown-right'>
-                          <label
-                            tabIndex={0}
-                            className='btn btn-circle btn-ghost btn-xs text-info'
-                          >
-                            <svg
-                              xmlns='http://www.w3.org/2000/svg'
-                              fill='none'
-                              viewBox='0 0 24 24'
-                              strokeWidth={1.5}
-                              stroke='black'
-                              className='w-6 h-6'
-                            >
-                              <path
-                                strokeLinecap='round'
-                                strokeLinejoin='round'
-                                d='M19.5 8.25l-7.5 7.5-7.5-7.5'
+                  <div className='mt-8'>
+                    <div className='flow-root'>
+                      <ul
+                        role='list'
+                        className='-my-6 divide-y divide-gray-200'
+                      >
+                        {shoppingCart.map((product) => (
+                          <li key={product.id} className='flex py-6'>
+                            <div className='h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200'>
+                              <img
+                                src={product.imageSrc}
+                                alt={product.imageAlt}
+                                className='h-full w-full object-cover object-center'
                               />
-                            </svg>
-                          </label>
-                          <ul
-                            tabIndex={0}
-                            className='dropdown-content menu p-2 shadow bg-white rounded-box w-52'
-                          >
-                            <li>
-                              <a>Pink</a>
-                            </li>
-                            <li>
-                              <a>Brown</a>
-                            </li>
-                            <li>
-                              <a>Violet</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <p className='font-poppins text-[12px]'>Brown</p>
-                      <p className='text-black text-sm  text-justify '></p>
-                      <div className='flex justify-between mt-3'>
-                        <QuantitySelector />
-                        <h2 className='font-bold text-[#dc2626] text-sm mt-9 hover:text-[#f87171] cursor-pointer'>
-                          Remove
-                        </h2>
-                      </div>
+                            </div>
+
+                            <div className='ml-4 flex flex-1 flex-col'>
+                              <div>
+                                <div className='flex justify-between text-base font-medium text-gray-900'>
+                                  <h3>
+                                    <Link to={product.path}>
+                                      {product.name}
+                                    </Link>
+                                  </h3>
+                                  <p className='ml-4'>{product.price}</p>
+                                </div>
+                                <p className='mt-1 text-sm text-gray-500'>
+                                  {product.variant}
+                                </p>
+                              </div>
+                              <div className='flex flex-1 items-end justify-between text-sm'>
+                                <p className='text-gray-500'>
+                                  Qty {product.quantity}
+                                </p>
+
+                                <div className='flex'>
+                                  <button
+                                    type='button'
+                                    className='font-medium text-[#dc2626] hover:text-[#f87171]'
+                                  >
+                                    Remove
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
 
-                  {/** 2nd Item */}
-                  <div className='avatar-container flex gap-3 border-b border-[#d1d5db] py-5'>
-                    <img
-                      className='h-[150px] w-[150px] mr-4 object-cover object-center'
-                      src={baguettebags_brown}
-                      alt=''
-                    />
-                    <div className='container'>
-                      <div className='flex justify-between'>
-                        <h2 className='font-bold text-black text-[15px]'>
-                          Baguette Bag
-                        </h2>
-                        <h2 className='font-bold text-black text-[15px]'>
-                          ₱300
-                        </h2>
-                      </div>
-                      <div className='flex gap-2 mt-2'>
-                        <p class='font-poppins text-[12px]'>Variations:</p>
-                        <div className='dropdown dropdown-right'>
-                          <label
-                            tabIndex={0}
-                            className='btn btn-circle btn-ghost btn-xs text-info'
-                          >
-                            <svg
-                              xmlns='http://www.w3.org/2000/svg'
-                              fill='none'
-                              viewBox='0 0 24 24'
-                              strokeWidth={1.5}
-                              stroke='black'
-                              className='w-6 h-6'
-                            >
-                              <path
-                                strokeLinecap='round'
-                                strokeLinejoin='round'
-                                d='M19.5 8.25l-7.5 7.5-7.5-7.5'
-                              />
-                            </svg>
-                          </label>
-                          <ul
-                            tabIndex={0}
-                            className='dropdown-content menu p-2 shadow bg-white rounded-box w-52'
-                          >
-                            <li>
-                              <a>Pink</a>
-                            </li>
-                            <li>
-                              <a>Brown</a>
-                            </li>
-                            <li>
-                              <a>Violet</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <p className='font-poppins text-[12px]'>Brown</p>
-                      <p className='text-black text-sm  text-justify '></p>
-                      <div className='flex justify-between mt-3'>
-                        <QuantitySelector />
-                        <h2 className='font-bold text-[#dc2626] text-sm mt-9 hover:text-[#f87171] cursor-pointer'>
-                          Remove
-                        </h2>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class='flex items-center'>
+                  <div class='flex items-center mt-5'>
                     <div className='container flex justify-between gap-3 border-b border-[#d1d5db] py-4'>
                       <p className='text-[#262626]'>Total (Items)</p>
-                      <p className='text-[#262626]'>₱300</p>
+                      <p className='text-[#262626]'>₱370.00</p>
                     </div>
                   </div>
                   <div class='flex items-center'>
                     <div className='container flex justify-between gap-3 border-b border-[#d1d5db] py-4'>
                       <p className='text-[#262626]'>Shipping Fee</p>
-                      <p className='text-[#262626]'>+50</p>
+                      <p className='text-[#262626]'>+50.00</p>
                     </div>
                   </div>
 
@@ -174,7 +96,7 @@ const Checkout = () => {
                         Order Total
                       </p>
                       <p className='text-[#262626] text-[20px] font-bold'>
-                        ₱350
+                        ₱420.00
                       </p>
                     </div>
                   </div>
