@@ -139,6 +139,7 @@ export const products = [
     variants: 'Pink, Violet, Green, Yellow',
     category: 'tulip-keychain',
     variant: 'Violet',
+    quantity: 1,
   },
   {
     id: 'PH1',
@@ -150,6 +151,7 @@ export const products = [
     variants: 'Baby Pink, Red, White',
     category: 'phone-holder',
     variant: 'Red',
+    quantity: 1,
   },
   {
     id: 'WL1',
@@ -161,6 +163,7 @@ export const products = [
     variants: 'Blue, Pink, Green, White, Brown',
     category: 'phone-holder',
     variant: 'Assorted',
+    quantity: 1,
   },
   {
     id: 'BH1',
@@ -172,6 +175,7 @@ export const products = [
     variants: 'Frog, Cow, Duck',
     category: 'bucket-hat',
     variant: 'Cow',
+    quantity: 1,
   },
 
   {
@@ -184,6 +188,7 @@ export const products = [
     variants: 'Brown, Pink, Violet',
     category: 'baguette-bags',
     variant: 'Brown',
+    quantity: 1,
   },
   {
     id: 'RB1',
@@ -195,6 +200,7 @@ export const products = [
     variants: 'Single, Multiple',
     category: 'flower-rose-bouquet',
     variant: 'Single',
+    quantity: 1,
   },
   {
     id: 'TB1',
@@ -206,6 +212,7 @@ export const products = [
     variants: 'Mint Green, Pastel Brown',
     category: 'flora-tote-bag',
     variant: 'Pastel Brown',
+    quantity: 1,
   },
   {
     id: 'TB2',
@@ -217,6 +224,46 @@ export const products = [
     variants: 'Brown, Gray, White',
     category: 'vintage-tote-bag',
     variant: 'White',
+    quantity: 1,
+  },
+];
+
+export const shoppingCart = [
+  {
+    id: 'TK1',
+    name: 'Tulip Keychain',
+    path: 'category_keychains',
+    imageSrc: tulipkeychain_violet,
+    imageAlt: 'Tulip Keychain Violet',
+    price: '₱90',
+    variants: 'Pink, Violet, Green, Yellow',
+    category: 'tulip-keychain',
+    variant: 'Violet',
+    quantity: 1,
+  },
+  {
+    id: 'PH1',
+    name: 'Phone Holder',
+    path: '',
+    imageSrc: phoneholder_red,
+    imageAlt: 'Phone Holder in Red',
+    price: '₱130',
+    variants: 'Baby Pink, Red, White',
+    category: 'phone-holder',
+    variant: 'Red',
+    quantity: 1,
+  },
+  {
+    id: 'WL1',
+    name: 'Wallet',
+    path: '',
+    imageSrc: wallets_assorted,
+    imageAlt: 'Wallets assorted',
+    price: '₱150',
+    variants: 'Blue, Pink, Green, White, Brown',
+    category: 'phone-holder',
+    variant: 'Pink',
+    quantity: 1,
   },
 ];
 

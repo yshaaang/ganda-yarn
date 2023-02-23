@@ -14,7 +14,7 @@ function QuantitySelector() {
   };
 
   return (
-    <div className='quantity bg-white flex max-w-0 mt-8'>
+    <div className='quantity bg-white flex max-w-0 '>
       <div className='bg-white w-5 px-1 border-r border-r-gray-200'>
         <button onClick={decrementQuantity}>-</button>
       </div>
