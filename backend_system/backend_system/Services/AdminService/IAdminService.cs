@@ -1,7 +1,6 @@
 ﻿using backend_system.Models;
-using Microsoft.AspNetCore.Mvc;
 
-namespace backend_system.Services.AdminService
+namespace backend_system.Services.ProductService
 {
     public interface IAdminService
     {

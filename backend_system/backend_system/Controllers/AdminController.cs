@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using backend_system.Models;
-using backend_system.Services.AdminService;
+using backend_system.Services.ProductService;
 
 namespace backend_system.Controllers
 {
@@ -46,6 +46,7 @@ namespace backend_system.Controllers
 
         [HttpPut]
         [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<List<Admin>>> UpdateAdmin(int id, [FromBody]Admin request)
         {
             var result = await _adminService.UpdateAdmin(id, request);
@@ -57,6 +58,7 @@ namespace backend_system.Controllers
 
         [HttpDelete]
         [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<List<Admin>>> DeleteAdmin(int id)
         {
             var result = await _adminService.DeleteAdmin(id);

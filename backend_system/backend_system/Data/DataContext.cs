@@ -17,5 +17,6 @@ namespace backend_system.Data
         }
 
         public DbSet<Admin> Admins { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }

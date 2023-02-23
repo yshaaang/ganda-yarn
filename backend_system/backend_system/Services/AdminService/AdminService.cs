@@ -1,7 +1,7 @@
 ﻿using backend_system.Data;
 using backend_system.Models;
 
-namespace backend_system.Services.AdminService
+namespace backend_system.Services.ProductService
 {
     public class AdminService : IAdminService
     {
