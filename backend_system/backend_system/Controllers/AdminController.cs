@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using backend_system.Models;
+using backend_system.Services.AdminService;
 
 namespace backend_system.Controllers
 {
@@ -8,35 +9,18 @@ namespace backend_system.Controllers
     [ApiController]
     public class AdminController : ControllerBase
     {
-        private static List<Admin> admins = new List<Admin>
+        private readonly IAdminService _adminService;
+
+        public AdminController(IAdminService adminService)
         {
-            new Admin
-            {
-                ID = 1,
-                Username = "admin",
-                Password = "thisisreallyauniquepassword",
-                FirstName = "Christian Roed",
-                LastName = "Boyles",
-                CreatedAt = DateTime.Now,
-                ModifiedAt = null
-            },
-            new Admin
-            {
-                ID = 2,
-                Username = "chrstnrdbyls",
-                Password = "GNDYRNpakmamsh",
-                FirstName = "Hanni",
-                LastName = "Pham",
-                CreatedAt = DateTime.Now,
-                ModifiedAt = null
-            }
-        };
+            _adminService = adminService;
+        }
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<List<Admin>>> GetAllAdmins()
         {
-            return Ok(admins);
+            return _adminService.GetAllAdmins();
         }
 
         [HttpGet("{id:int}")]
@@ -44,49 +28,42 @@ namespace backend_system.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<Admin>> GetAdmin(int id)
         {
-            var admin = admins.Find(x => x.ID == id);
-            if(admin is null)
-                return NotFound("Admin account doesn't exist.");
+            var result = _adminService.GetAdmin(id);
+            if (result is null)
+                return NotFound("Admin doesn't exist.");
 
-            return Ok(admin);
+            return Ok(result);
         }
 
         [HttpPost("id:int")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<List<Admin>>> AddAdmin([FromBody]Admin admin)
         {
-            admins.Add(admin);
-            return Ok(admins);
+            var result = _adminService.AddAdmin(admin);
+
+            return Ok(result);
         }
 
         [HttpPut]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<List<Admin>>> UpdateAdmin(int id, [FromBody]Admin request)
         {
-            var admin = admins.Find(x => x.ID == id);
-            if(admin is null)
-                return NotFound("Admin account doesn't exist.");
+            var result = _adminService.UpdateAdmin(id, request);
+            if (result is null)
+                return NotFound("Admin doesn't exist.");
 
-            admin.Username = request.Username;
-            admin.Password = request.Password;
-            admin.FirstName = request.FirstName;
-            admin.LastName = request.LastName;
-            admin.ModifiedAt = DateTime.Now;
-            
-            return Ok(admin);
+            return Ok(result);
         }
 
         [HttpDelete]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<List<Admin>>> DeleteAdmin(int id)
         {
-            var admin = admins.Find(x => x.ID == id);
-            if (admin is null)
-                return NotFound("Admin account doesn't exist.");
+            var result = _adminService.DeleteAdmin(id);
+            if (result is null)
+                return NotFound("Admin doesn't exist.");
 
-            admins.Remove(admin);
-
-            return Ok(admins);
+            return Ok(result);
         }
     }
 }
