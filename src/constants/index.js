@@ -1,4 +1,14 @@
-import { facebook, instagram, linkedin, twitter } from '../assets';
+import { addtocart, facebook, instagram, linkedin, twitter } from '../assets';
+import { baguettebags_brown } from '../assets/gy_products/Baguette Bags';
+import { tulipkeychain_violet } from '../assets/gy_products/Keychains';
+import {
+  Flora_Tote_Bag_pastel_brown,
+  Vintage_Crochet_Bag_white,
+} from '../assets/gy_products/Tote Bags';
+import { Flower_singlebouquet } from '../assets/gy_products/Flowers/Rose';
+import { buckethat_cowprint } from '../assets/gy_products/Bucket Hat';
+import { phoneholder_red } from '../assets/gy_products/Phone Holder';
+import { wallets_assorted } from '../assets/gy_products/Wallets';
 
 export const headLinks = [
   {
@@ -10,6 +20,15 @@ export const headLinks = [
     id: 'login',
     path: 'login',
     title: 'LOGIN',
+  },
+];
+
+export const ShopCart = [
+  {
+    id: 'add-to-cart',
+    path: '',
+    icon: addtocart,
+    title: 'Add to Cart',
   },
 ];
 
@@ -109,33 +128,97 @@ export const ProdCategories = [
   },
 ];
 
-/**
-export const feedback = [
+export const products = [
   {
-    id: 'feedback-1',
-    content:
-      'Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.',
-    name: 'Herman Jensen',
-    title: 'Founder & Leader',
-    img: people01,
+    id: 'TK1',
+    name: 'Tulip Keychain',
+    path: 'category_keychains',
+    imageSrc: tulipkeychain_violet,
+    imageAlt: 'Tulip Keychain Violet',
+    price: '₱90',
+    variants: 'Pink, Violet, Green, Yellow',
+    category: 'tulip-keychain',
+    variant: 'Violet',
   },
   {
-    id: 'feedback-2',
-    content:
-      "Money makes your life easier. If you're lucky to have it, you're lucky.",
-    name: 'Steve Mark',
-    title: 'Founder & Leader',
-    img: people02,
+    id: 'PH1',
+    name: 'Phone Holder',
+    path: '',
+    imageSrc: phoneholder_red,
+    imageAlt: 'Phone Holder in Red',
+    price: '₱130',
+    variants: 'Baby Pink, Red, White',
+    category: 'phone-holder',
+    variant: 'Red',
   },
   {
-    id: 'feedback-3',
-    content:
-      'It is usually people in the money business, finance, and international trade that are really rich.',
-    name: 'Kenn Gallagher',
-    title: 'Founder & Leader',
-    img: people03,
+    id: 'WL1',
+    name: 'Wallet',
+    path: '',
+    imageSrc: wallets_assorted,
+    imageAlt: 'Wallets assorted',
+    price: '₱150',
+    variants: 'Blue, Pink, Green, White, Brown',
+    category: 'phone-holder',
+    variant: 'Assorted',
   },
-];  */
+  {
+    id: 'BH1',
+    name: 'Bucket Hat',
+    path: '',
+    imageSrc: buckethat_cowprint,
+    imageAlt: 'Cow Bucket Hat',
+    price: '₱300',
+    variants: 'Frog, Cow, Duck',
+    category: 'bucket-hat',
+    variant: 'Cow',
+  },
+
+  {
+    id: 'BB1',
+    name: 'Baguette Bags',
+    path: 'category_baguette_bags',
+    imageSrc: baguettebags_brown,
+    imageAlt: 'Baguette Bag in Color Brown',
+    price: '₱300',
+    variants: 'Brown, Pink, Violet',
+    category: 'baguette-bags',
+    variant: 'Brown',
+  },
+  {
+    id: 'RB1',
+    name: 'Rose Bouquet',
+    path: '',
+    imageSrc: Flower_singlebouquet,
+    imageAlt: 'Rose Bouquet',
+    price: '₱400',
+    variants: 'Single, Multiple',
+    category: 'flower-rose-bouquet',
+    variant: 'Single',
+  },
+  {
+    id: 'TB1',
+    name: 'Flora Tote Bag',
+    path: '',
+    imageSrc: Flora_Tote_Bag_pastel_brown,
+    imageAlt: 'Flora Tote Bag',
+    price: '₱400',
+    variants: 'Mint Green, Pastel Brown',
+    category: 'flora-tote-bag',
+    variant: 'Pastel Brown',
+  },
+  {
+    id: 'TB2',
+    name: 'Vintage Tote Bag',
+    path: '',
+    imageSrc: Vintage_Crochet_Bag_white,
+    imageAlt: 'Vintage Tote Bag',
+    price: '₱500',
+    variants: 'Brown, Gray, White',
+    category: 'vintage-tote-bag',
+    variant: 'White',
+  },
+];
 
 export const footerLinks = [
   {

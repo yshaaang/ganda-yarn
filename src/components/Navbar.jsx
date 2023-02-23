@@ -1,12 +1,10 @@
 import { useState, useContext } from 'react';
-import { close, logo, menu } from '../assets';
+import { addtocart, close, logo, menu } from '../assets';
 import { navLinks } from '../constants';
 import { Link } from 'react-router-dom';
-import SlideCart from './SlideCart';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
-  // const { isOpen, setIsOpen } = useContext(SlideCart);
 
   return (
     <nav className='w-full flex py-6 justify-between items-center navbar'>
@@ -44,10 +42,7 @@ const Navbar = () => {
           </svg>
         </li>
 
-        <li
-          className={`cursor-pointer mr-10' `}
-          onClick={() => setIsOpen(!isOpen)}
-        >
+        <li className='cursor-pointer mr-8'>
           <Link to='/slidecart' path='slidecart'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
