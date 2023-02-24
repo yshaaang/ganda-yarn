@@ -23,5 +23,7 @@ public partial class ProductAttribute
 
     public virtual ICollection<Cart> Carts { get; } = new List<Cart>();
 
+    public virtual ICollection<OrderProduct> OrderProducts { get; } = new List<OrderProduct>();
+
     public virtual Product Product { get; set; } = null!;
 }

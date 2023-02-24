@@ -13,11 +13,15 @@ public partial class Product
 
     public string PreviewImageLink { get; set; } = null!;
 
+    public int QuantitySold { get; set; }
+
     public DateTime CreatedAt { get; set; }
 
     public DateTime? ModifiedAt { get; set; }
 
     public virtual ICollection<Cart> Carts { get; } = new List<Cart>();
+
+    public virtual ICollection<OrderProduct> OrderProducts { get; } = new List<OrderProduct>();
 
     public virtual ICollection<ProductAttribute> ProductAttributes { get; } = new List<ProductAttribute>();
 }
