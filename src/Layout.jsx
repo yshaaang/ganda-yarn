@@ -40,7 +40,7 @@ const Layout = () => {
           </div>
         </div>
       </div>
-      
+
       <SlideCart />
     </div>
   );
