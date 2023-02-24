@@ -11,6 +11,8 @@ import Footer from './Footer';
 import QuantitySelector from './QuantitySelector';
 import Checkout from './Checkout';
 import RadioWithLabel from './RadioWithLabel';
+import PlaceOrderModal from './PlaceOrderModal';
+import OrderStatus from './OrderStatus';
 
 export {
   SiteHeader,
@@ -26,4 +28,6 @@ export {
   QuantitySelector,
   Checkout,
   RadioWithLabel,
+  PlaceOrderModal,
+  OrderStatus,
 };
