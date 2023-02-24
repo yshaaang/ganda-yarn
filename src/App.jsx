@@ -25,6 +25,7 @@ import {
   ShoppingCart,
 } from './components';
 import SlideCart from './components/SlideCart';
+import { AdminPage } from './pages/Administrator';
 
 const App = () => (
   <div>
@@ -34,6 +35,7 @@ const App = () => (
         <Route path='products' element={<Products />} />
         <Route path='about' element={<About />} />
         <Route path='contact' element={<Contact />} />
+        <Route path='admin_page' element={<AdminPage />} />
 
         <Route path='category_baguette_bags' element={<BaguetteBags />} />
         <Route path='category_bandana' element={<Bandana />} />

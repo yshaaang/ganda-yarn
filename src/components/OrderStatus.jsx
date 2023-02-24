@@ -1,5 +1,3 @@
-import styles from '../style';
-
 import { Link } from 'react-router-dom';
 import { shoppingCart } from '../constants';
 import QuantitySelector from './QuantitySelector';
@@ -13,7 +11,7 @@ const OrderStatus = () => (
         </h2>
         <div className='mx-auto text-center mt-5'>
           <ul className='steps' style={{ width: '500px' }}>
-            <li className='step step-secondary'>To Pay</li>
+            <li className='step step-secondary'>Processing</li>
             <li className='step step-secondary'>To Ship</li>
             <li className='step'>To Receive</li>
             <li className='step'>Completed</li>
