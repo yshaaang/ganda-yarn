@@ -21,10 +21,6 @@ const Products = () => {
     });
   }, []);
 
-  // useEffect(() => {
-  //   console.log("Products changed");
-  // }, [products]);
-
 
   return (
     <div className='bg-white w-full overflow-hidden'>

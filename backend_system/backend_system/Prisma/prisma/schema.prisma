@@ -21,12 +21,14 @@ model Product {
   name String
   description String @db.LongText
   preview_image_link String
+  quantity_sold Int
 
   created_at DateTime
   modified_at DateTime?
 
-  attributes Product_Attribute[]
-  cart Cart[]
+  order_product Order_Product[]
+  product_attribute Product_Attribute[]
+  carts Cart[]
 }
 
 model Product_Attribute {
@@ -43,17 +45,18 @@ model Product_Attribute {
   created_at DateTime
   modified_at DateTime?
 
-  cart Cart[]
+  carts Cart[]
+  order_products Order_Product[]
 }
 
 model Cart {
-  customer Customer @relation(fields: [customer_id], references: [id])
+  customer Customer @relation(fields: [customer_id], references: [id], onDelete: Cascade)
   customer_id Int @unique
 
-  product Product @relation(fields: [product_id], references: [id])
+  product Product @relation(fields: [product_id], references: [id], onDelete: Cascade)
   product_id Int
 
-  attribute Product_Attribute @relation(fields: [attribute_id], references: [id])
+  product_attribute Product_Attribute @relation(fields: [attribute_id], references: [id], onDelete: Cascade)
   attribute_id Int
 
   quantity Int
@@ -67,8 +70,58 @@ model Cart {
 
 model Customer {
   id Int @id @default(autoincrement())
+  username String @unique
+  password String
+  
+  first_name String
+  last_name String
+  gender String
 
-  cart Cart?
+  mobile_number Int
+  home_address String
+  email_address String
+
+  created_at DateTime
+  modified_at DateTime?
+
+  carts Cart[]
+  orders Order[]
+  order_products Order_Product[]
+}
+
+model Order {
+  id Int @id @default(autoincrement())
+  
+  customer Customer @relation(fields: [customer_id], references: [id], onDelete: Cascade)
+  customer_id Int
+
+  total_price Decimal
+  
+  status Status @relation(fields: [status_code], references: [code], onDelete: Cascade)
+  status_code String
+
+  created_at DateTime
+  modified_at DateTime?
+
+  order_products Order_Product[]
+}
+
+model Order_Product {
+  id Int @id @default(autoincrement())
+
+  order Order @relation(fields: [order_id], references: [id], onDelete: Cascade)
+  order_id Int
+
+  customer Customer @relation(fields: [customer_id], references: [id], onDelete: Cascade)
+  customer_id Int
+
+  product Product @relation(fields: [product_id], references: [id], onDelete: Cascade)
+  product_id Int
+
+  product_attribute Product_Attribute @relation(fields: [attribute_id], references: [id], onDelete: Cascade)
+  attribute_id Int
+
+  reviews Review[]
 }
 
 model Admin {
@@ -83,76 +136,25 @@ model Admin {
   modified_at DateTime?
 }
 
-// model Product {
-//   id String @id @default(uuid())
+model Review {
+  id Int @id @default(autoincrement())
 
-//   name  String
-//   price Float
-//   stock Int
+  order_product Order_Product @relation(fields: [order_product_id], references: [id], onDelete: Cascade)
+  order_product_id Int
 
-//   shortDescription String
-//   longDescription  String
+  rate Int
+  comment String @db.LongText
+  
+  created_at DateTime
+  modified_at DateTime?
+}
 
-//   reviews Review[]
+model Status{
+  code String @id
+  description String @db.LongText
 
-//   categories ProductsOnCategories[]
+  created_at DateTime
+  modified_at DateTime?
 
-//   items CartItem[]
-
-//   image   Image  @relation(fields: [imageId], references: [id], onDelete: NoAction)
-//   imageId String
-// }
-
-// model ProductsOnCategories {
-//   product    Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
-//   productId  String
-//   category   Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
-//   categoryId String
-
-//   @@id([productId, categoryId])
-// }
-
-// model Review {
-//   id String @id @default(uuid())
-
-//   rating Int
-//   message String
-
-//   user   User   @relation(fields: [userId], references: [id])
-//   userId String
-
-//   product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
-//   productId String
-// }
-
-// model Cart {
-//   id String @id @default(uuid())
-
-//   user   User   @relation(fields: [userId], references: [id])
-//   userId String @unique
-
-//   items CartItem[]
-// }
-
-// model CartItem {
-//   cart   Cart   @relation(fields: [cartId], references: [id])
-//   cartId String
-
-//   product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
-//   productId String
-
-//   quantity Int @default(1)
-
-//   @@id([cartId, productId])
-// }
-
-// model Image {
-//   id String @id @default(uuid())
-
-//   path String
-
-//   external Boolean @default(false)
-
-//   products Product[]
-//   profile  User[]
-// }
+  orders Order[]
+}
