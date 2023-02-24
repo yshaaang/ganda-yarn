@@ -1,0 +1,158 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserType {
+  USER
+  ADMIN
+}
+
+model Product {
+  id Int @id @default(autoincrement())
+
+  name String
+  description String @db.LongText
+  preview_image_link String
+
+  created_at DateTime
+  modified_at DateTime?
+
+  attributes Product_Attribute[]
+  cart Cart[]
+}
+
+model Product_Attribute {
+  id Int @id @default(autoincrement())
+
+  product Product @relation(fields: [product_id], references: [id], onDelete: Cascade)
+  product_id Int
+
+  variant String
+  image_link String
+  price Decimal
+  stock Int
+
+  created_at DateTime
+  modified_at DateTime?
+
+  cart Cart[]
+}
+
+model Cart {
+  customer Customer @relation(fields: [customer_id], references: [id])
+  customer_id Int @unique
+
+  product Product @relation(fields: [product_id], references: [id])
+  product_id Int
+
+  attribute Product_Attribute @relation(fields: [attribute_id], references: [id])
+  attribute_id Int
+
+  quantity Int
+  total_price Decimal
+
+  created_at DateTime
+  modified_at DateTime?
+
+  @@id([customer_id, product_id, attribute_id])
+}
+
+model Customer {
+  id Int @id @default(autoincrement())
+
+  cart Cart?
+}
+
+model Admin {
+  id Int @id @default(autoincrement())
+  username String @unique
+  password String
+
+  first_name String
+  last_name String
+
+  created_at DateTime
+  modified_at DateTime?
+}
+
+// model Product {
+//   id String @id @default(uuid())
+
+//   name  String
+//   price Float
+//   stock Int
+
+//   shortDescription String
+//   longDescription  String
+
+//   reviews Review[]
+
+//   categories ProductsOnCategories[]
+
+//   items CartItem[]
+
+//   image   Image  @relation(fields: [imageId], references: [id], onDelete: NoAction)
+//   imageId String
+// }
+
+// model ProductsOnCategories {
+//   product    Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+//   productId  String
+//   category   Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+//   categoryId String
+
+//   @@id([productId, categoryId])
+// }
+
+// model Review {
+//   id String @id @default(uuid())
+
+//   rating Int
+//   message String
+
+//   user   User   @relation(fields: [userId], references: [id])
+//   userId String
+
+//   product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+//   productId String
+// }
+
+// model Cart {
+//   id String @id @default(uuid())
+
+//   user   User   @relation(fields: [userId], references: [id])
+//   userId String @unique
+
+//   items CartItem[]
+// }
+
+// model CartItem {
+//   cart   Cart   @relation(fields: [cartId], references: [id])
+//   cartId String
+
+//   product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+//   productId String
+
+//   quantity Int @default(1)
+
+//   @@id([cartId, productId])
+// }
+
+// model Image {
+//   id String @id @default(uuid())
+
+//   path String
+
+//   external Boolean @default(false)
+
+//   products Product[]
+//   profile  User[]
+// }

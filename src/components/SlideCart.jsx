@@ -1,12 +1,13 @@
-import { Fragment, useState } from 'react';
+import { Fragment, useState, useContext } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 import { shoppingCart } from '../constants';
 import QuantitySelector from './QuantitySelector';
+import SlideCartContext from "./../context/SlideCartContext";
 
 export default function SlideCart() {
-  const [open, setOpen] = useState(true);
+  const { open, setOpen } = useContext(SlideCartContext);
 
   return (
     <Transition.Root show={open} as={Fragment}>
@@ -20,7 +21,9 @@ export default function SlideCart() {
           leaveFrom='opacity-100'
           leaveTo='opacity-0'
         >
-          <div className='fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity' />
+          <div className='fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity' onClick={() => {
+            setOpen(false);
+          }} />
         </Transition.Child>
 
         <div className='fixed inset-0 overflow-hidden'>
