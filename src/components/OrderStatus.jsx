@@ -8,10 +8,10 @@ const OrderStatus = () => (
   <div className='bg-white w-full overflow-hidden'>
     <div class='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       <div class='mx-auto max-w-2xl py-8 sm:py-15 lg:max-w-none lg:py-6'>
-        <h2 class='text-2xl text-center font-bold text-gray-900'>
+        <h2 class='text-[30px] text-center font-bold text-gray-900'>
           Order Status
         </h2>
-        <div className='mx-auto'>
+        <div className='mx-auto text-center mt-5'>
           <ul className='steps' style={{ width: '500px' }}>
             <li className='step step-secondary'>To Pay</li>
             <li className='step step-secondary'>To Ship</li>
