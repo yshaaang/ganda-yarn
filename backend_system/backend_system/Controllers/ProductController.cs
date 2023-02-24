@@ -1,6 +1,5 @@
 ﻿using backend_system.Models;
 using backend_system.Services.ProductService;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend_system.Controllers
@@ -50,6 +49,18 @@ namespace backend_system.Controllers
         public async Task<ActionResult<List<Product>>> UpdateProduct(int id, [FromBody] Product request)
         {
             var result = await _productService.UpdateProduct(id, request);
+            if (result is null)
+                return NotFound("Product doesn't exist.");
+
+            return Ok(result);
+        }
+
+        [HttpDelete]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<List<Product>>> DeleteProduct(int id)
+        {
+            var result = await _productService.DeleteProduct(id);
             if (result is null)
                 return NotFound("Product doesn't exist.");
 

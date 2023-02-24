@@ -1,13 +1,13 @@
-﻿using backend_system.Data;
-using backend_system.Models;
+﻿using backend_system.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace backend_system.Services.ProductService
 {
     public class AdminService : IAdminService
     {
-        private readonly DataContext _context;
+        private readonly GandaYarnDatabaseContext _context;
 
-        public AdminService(DataContext context)
+        public AdminService(GandaYarnDatabaseContext context)
         {
             _context = context;
         }

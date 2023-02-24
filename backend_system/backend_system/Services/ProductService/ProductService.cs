@@ -1,13 +1,13 @@
-﻿using backend_system.Data;
-using backend_system.Models;
+﻿using backend_system.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace backend_system.Services.ProductService
 {
     public class ProductService : IProductService
     {
-        private readonly DataContext _context;
+        private readonly GandaYarnDatabaseContext _context;
 
-        public ProductService(DataContext context)
+        public ProductService(GandaYarnDatabaseContext context)
         {
             _context = context;
         }
@@ -34,7 +34,7 @@ namespace backend_system.Services.ProductService
 
         public async Task<List<Product>> GetAllProducts()
         {
-            var products = await _context.Products.ToListAsync();
+            var products = await _context.Products.Include(product => product.ProductAttributes).ToListAsync();
 
             return products;
         }

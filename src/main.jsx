@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import './index.css';
 import ScrollToTop from './ScrollToTop';
+import { SlideCartProvider } from './context/SlideCartContext';
 
 const router = createBrowserRouter([
   {
@@ -19,8 +20,10 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <ScrollToTop />
-      <App />
+      <SlideCartProvider>
+        <ScrollToTop />
+        <App />
+      </SlideCartProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

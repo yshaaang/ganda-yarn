@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './style';
 import { Outlet } from 'react-router-dom';
-import { SiteHeader, Navbar, Footer } from './components';
+import { SiteHeader, Navbar, Footer, SlideCart } from './components';
 
 const Layout = () => {
   return (
@@ -40,6 +40,8 @@ const Layout = () => {
           </div>
         </div>
       </div>
+      
+      <SlideCart />
     </div>
   );
 };
