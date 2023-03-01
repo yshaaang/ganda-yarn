@@ -9,7 +9,7 @@ public partial class OrderProduct
 
     public int OrderId { get; set; }
 
-    public int CustomerId { get; set; }
+    public int UserId { get; set; }
 
     public int ProductId { get; set; }
 
@@ -17,11 +17,11 @@ public partial class OrderProduct
 
     public virtual ProductAttribute Attribute { get; set; } = null!;
 
-    public virtual Customer Customer { get; set; } = null!;
-
     public virtual Order Order { get; set; } = null!;
 
     public virtual Product Product { get; set; } = null!;
 
     public virtual ICollection<Review> Reviews { get; } = new List<Review>();
+
+    public virtual User User { get; set; } = null!;
 }

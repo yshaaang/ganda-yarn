@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react';
-// import { products } from '../constants';
 import { Link } from 'react-router-dom';
 import axios from "axios";
-
-
-
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -12,21 +8,16 @@ const Products = () => {
   useEffect(() => {
     axios.get("https://localhost:7206/api/Product").then(function (response) {
       setProducts(response.data);
-
-      console.log("called")
-
-      console.log({products: response.data});
     }).catch(function (e) {
       console.error(e)
     });
   }, []);
 
-
   return (
     <div className='bg-white w-full overflow-hidden'>
-      <div class='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-        <div class='mx-auto max-w-2xl py-8 sm:py-15 lg:max-w-none lg:py-6'>
-          <h2 class='text-2xl font-bold text-gray-900'>Collections</h2>
+      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+        <div className='mx-auto max-w-2xl py-8 sm:py-15 lg:max-w-none lg:py-6'>
+          <h2 className='text-2xl font-bold text-gray-900'>Collections</h2>
 
           <div className='mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
             {products.map((product) => {
@@ -35,6 +26,7 @@ const Products = () => {
               const max = Math.max(...prices);
 
               return <div key={product.id} className='group relative'>
+                <Link to={`/product/${product.id}`}>
               <div className='min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80'>
                 <img
                   src={product.previewImageLink}
@@ -45,10 +37,8 @@ const Products = () => {
               <div className='mt-4 flex justify-between'>
                 <div>
                   <h3 className='text-sm text-gray-700'>
-                    <Link to={`/${product.path}`}>
                       <span aria-hidden='true' className='absolute inset-0' />
                       {product.name}
-                    </Link>
                   </h3>
                   <p className='mt-1 text-sm text-gray-500'>
                     {product.productAttributes.map((attr) => attr.variant).join(", ")}
@@ -58,6 +48,7 @@ const Products = () => {
                   {min === max ? `₱${min}` : `₱${min}-₱${max}`}
                 </p>
               </div>
+                    </Link>
             </div>
             })}
           </div>

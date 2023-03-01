@@ -41,7 +41,7 @@ namespace backend_system.Services.ProductService
 
         public async Task<Product?> GetProduct(int id)
         {
-            var product = await _context.Products.FindAsync(id);
+            var product = await _context.Products.Where(product => product.Id == id).Include(product => product.ProductAttributes).FirstOrDefaultAsync();
             if (product is null)
                 return null;
 

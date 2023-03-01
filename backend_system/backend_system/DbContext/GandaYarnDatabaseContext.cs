@@ -14,11 +14,7 @@ public partial class GandaYarnDatabaseContext : DbContext
     {
     }
 
-    public virtual DbSet<Admin> Admins { get; set; }
-
     public virtual DbSet<Cart> Carts { get; set; }
-
-    public virtual DbSet<Customer> Customers { get; set; }
 
     public virtual DbSet<Order> Orders { get; set; }
 
@@ -32,6 +28,8 @@ public partial class GandaYarnDatabaseContext : DbContext
 
     public virtual DbSet<Status> Statuses { get; set; }
 
+    public virtual DbSet<User> Users { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseMySql("server=localhost;port=3306;database=ganda-yarn;uid=admin;password=admin", Microsoft.EntityFrameworkCore.ServerVersion.Parse("10.4.27-mariadb"));
@@ -42,42 +40,9 @@ public partial class GandaYarnDatabaseContext : DbContext
             .UseCollation("utf8mb4_general_ci")
             .HasCharSet("utf8mb4");
 
-        modelBuilder.Entity<Admin>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PRIMARY");
-
-            entity
-                .ToTable("admin")
-                .UseCollation("utf8mb4_unicode_ci");
-
-            entity.HasIndex(e => e.Username, "Admin_username_key").IsUnique();
-
-            entity.Property(e => e.Id)
-                .HasColumnType("int(11)")
-                .HasColumnName("id");
-            entity.Property(e => e.CreatedAt)
-                .HasColumnType("datetime(3)")
-                .HasColumnName("created_at");
-            entity.Property(e => e.FirstName)
-                .HasMaxLength(191)
-                .HasColumnName("first_name");
-            entity.Property(e => e.LastName)
-                .HasMaxLength(191)
-                .HasColumnName("last_name");
-            entity.Property(e => e.ModifiedAt)
-                .HasColumnType("datetime(3)")
-                .HasColumnName("modified_at");
-            entity.Property(e => e.Password)
-                .HasMaxLength(191)
-                .HasColumnName("password");
-            entity.Property(e => e.Username)
-                .HasMaxLength(191)
-                .HasColumnName("username");
-        });
-
         modelBuilder.Entity<Cart>(entity =>
         {
-            entity.HasKey(e => new { e.CustomerId, e.ProductId, e.AttributeId })
+            entity.HasKey(e => new { e.UserId, e.ProductId, e.AttributeId })
                 .HasName("PRIMARY")
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0, 0 });
 
@@ -87,13 +52,13 @@ public partial class GandaYarnDatabaseContext : DbContext
 
             entity.HasIndex(e => e.AttributeId, "Cart_attribute_id_fkey");
 
-            entity.HasIndex(e => e.CustomerId, "Cart_customer_id_key").IsUnique();
-
             entity.HasIndex(e => e.ProductId, "Cart_product_id_fkey");
 
-            entity.Property(e => e.CustomerId)
+            entity.HasIndex(e => e.UserId, "Cart_user_id_key").IsUnique();
+
+            entity.Property(e => e.UserId)
                 .HasColumnType("int(11)")
-                .HasColumnName("customer_id");
+                .HasColumnName("user_id");
             entity.Property(e => e.ProductId)
                 .HasColumnType("int(11)")
                 .HasColumnName("product_id");
@@ -115,58 +80,13 @@ public partial class GandaYarnDatabaseContext : DbContext
                 .HasForeignKey(d => d.AttributeId)
                 .HasConstraintName("Cart_attribute_id_fkey");
 
-            entity.HasOne(d => d.Customer).WithOne(p => p.Cart)
-                .HasForeignKey<Cart>(d => d.CustomerId)
-                .HasConstraintName("Cart_customer_id_fkey");
-
             entity.HasOne(d => d.Product).WithMany(p => p.Carts)
                 .HasForeignKey(d => d.ProductId)
                 .HasConstraintName("Cart_product_id_fkey");
-        });
 
-        modelBuilder.Entity<Customer>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PRIMARY");
-
-            entity
-                .ToTable("customer")
-                .UseCollation("utf8mb4_unicode_ci");
-
-            entity.HasIndex(e => e.Username, "Customer_username_key").IsUnique();
-
-            entity.Property(e => e.Id)
-                .HasColumnType("int(11)")
-                .HasColumnName("id");
-            entity.Property(e => e.CreatedAt)
-                .HasColumnType("datetime(3)")
-                .HasColumnName("created_at");
-            entity.Property(e => e.EmailAddress)
-                .HasMaxLength(191)
-                .HasColumnName("email_address");
-            entity.Property(e => e.FirstName)
-                .HasMaxLength(191)
-                .HasColumnName("first_name");
-            entity.Property(e => e.Gender)
-                .HasMaxLength(191)
-                .HasColumnName("gender");
-            entity.Property(e => e.HomeAddress)
-                .HasMaxLength(191)
-                .HasColumnName("home_address");
-            entity.Property(e => e.LastName)
-                .HasMaxLength(191)
-                .HasColumnName("last_name");
-            entity.Property(e => e.MobileNumber)
-                .HasColumnType("int(11)")
-                .HasColumnName("mobile_number");
-            entity.Property(e => e.ModifiedAt)
-                .HasColumnType("datetime(3)")
-                .HasColumnName("modified_at");
-            entity.Property(e => e.Password)
-                .HasMaxLength(191)
-                .HasColumnName("password");
-            entity.Property(e => e.Username)
-                .HasMaxLength(191)
-                .HasColumnName("username");
+            entity.HasOne(d => d.User).WithOne(p => p.Cart)
+                .HasForeignKey<Cart>(d => d.UserId)
+                .HasConstraintName("Cart_user_id_fkey");
         });
 
         modelBuilder.Entity<Order>(entity =>
@@ -177,9 +97,9 @@ public partial class GandaYarnDatabaseContext : DbContext
                 .ToTable("order")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.CustomerId, "Order_customer_id_fkey");
-
             entity.HasIndex(e => e.StatusCode, "Order_status_code_fkey");
+
+            entity.HasIndex(e => e.UserId, "Order_user_id_fkey");
 
             entity.Property(e => e.Id)
                 .HasColumnType("int(11)")
@@ -187,9 +107,6 @@ public partial class GandaYarnDatabaseContext : DbContext
             entity.Property(e => e.CreatedAt)
                 .HasColumnType("datetime(3)")
                 .HasColumnName("created_at");
-            entity.Property(e => e.CustomerId)
-                .HasColumnType("int(11)")
-                .HasColumnName("customer_id");
             entity.Property(e => e.ModifiedAt)
                 .HasColumnType("datetime(3)")
                 .HasColumnName("modified_at");
@@ -197,14 +114,17 @@ public partial class GandaYarnDatabaseContext : DbContext
                 .HasMaxLength(191)
                 .HasColumnName("status_code");
             entity.Property(e => e.TotalPrice).HasColumnName("total_price");
-
-            entity.HasOne(d => d.Customer).WithMany(p => p.Orders)
-                .HasForeignKey(d => d.CustomerId)
-                .HasConstraintName("Order_customer_id_fkey");
+            entity.Property(e => e.UserId)
+                .HasColumnType("int(11)")
+                .HasColumnName("user_id");
 
             entity.HasOne(d => d.StatusCodeNavigation).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.StatusCode)
                 .HasConstraintName("Order_status_code_fkey");
+
+            entity.HasOne(d => d.User).WithMany(p => p.Orders)
+                .HasForeignKey(d => d.UserId)
+                .HasConstraintName("Order_user_id_fkey");
         });
 
         modelBuilder.Entity<OrderProduct>(entity =>
@@ -217,11 +137,11 @@ public partial class GandaYarnDatabaseContext : DbContext
 
             entity.HasIndex(e => e.AttributeId, "Order_Product_attribute_id_fkey");
 
-            entity.HasIndex(e => e.CustomerId, "Order_Product_customer_id_fkey");
-
             entity.HasIndex(e => e.OrderId, "Order_Product_order_id_fkey");
 
             entity.HasIndex(e => e.ProductId, "Order_Product_product_id_fkey");
+
+            entity.HasIndex(e => e.UserId, "Order_Product_user_id_fkey");
 
             entity.Property(e => e.Id)
                 .HasColumnType("int(11)")
@@ -229,23 +149,19 @@ public partial class GandaYarnDatabaseContext : DbContext
             entity.Property(e => e.AttributeId)
                 .HasColumnType("int(11)")
                 .HasColumnName("attribute_id");
-            entity.Property(e => e.CustomerId)
-                .HasColumnType("int(11)")
-                .HasColumnName("customer_id");
             entity.Property(e => e.OrderId)
                 .HasColumnType("int(11)")
                 .HasColumnName("order_id");
             entity.Property(e => e.ProductId)
                 .HasColumnType("int(11)")
                 .HasColumnName("product_id");
+            entity.Property(e => e.UserId)
+                .HasColumnType("int(11)")
+                .HasColumnName("user_id");
 
             entity.HasOne(d => d.Attribute).WithMany(p => p.OrderProducts)
                 .HasForeignKey(d => d.AttributeId)
                 .HasConstraintName("Order_Product_attribute_id_fkey");
-
-            entity.HasOne(d => d.Customer).WithMany(p => p.OrderProducts)
-                .HasForeignKey(d => d.CustomerId)
-                .HasConstraintName("Order_Product_customer_id_fkey");
 
             entity.HasOne(d => d.Order).WithMany(p => p.OrderProducts)
                 .HasForeignKey(d => d.OrderId)
@@ -254,6 +170,10 @@ public partial class GandaYarnDatabaseContext : DbContext
             entity.HasOne(d => d.Product).WithMany(p => p.OrderProducts)
                 .HasForeignKey(d => d.ProductId)
                 .HasConstraintName("Order_Product_product_id_fkey");
+
+            entity.HasOne(d => d.User).WithMany(p => p.OrderProducts)
+                .HasForeignKey(d => d.UserId)
+                .HasConstraintName("Order_Product_user_id_fkey");
         });
 
         modelBuilder.Entity<Product>(entity =>
@@ -373,6 +293,55 @@ public partial class GandaYarnDatabaseContext : DbContext
             entity.Property(e => e.ModifiedAt)
                 .HasColumnType("datetime(3)")
                 .HasColumnName("modified_at");
+        });
+
+        modelBuilder.Entity<User>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PRIMARY");
+
+            entity
+                .ToTable("user")
+                .UseCollation("utf8mb4_unicode_ci");
+
+            entity.HasIndex(e => e.Username, "User_username_key").IsUnique();
+
+            entity.Property(e => e.Id)
+                .HasColumnType("int(11)")
+                .HasColumnName("id");
+            entity.Property(e => e.CreatedAt)
+                .HasColumnType("datetime(3)")
+                .HasColumnName("created_at");
+            entity.Property(e => e.EmailAddress)
+                .HasMaxLength(191)
+                .HasColumnName("email_address");
+            entity.Property(e => e.FirstName)
+                .HasMaxLength(191)
+                .HasColumnName("first_name");
+            entity.Property(e => e.Gender)
+                .HasMaxLength(191)
+                .HasColumnName("gender");
+            entity.Property(e => e.HomeAddress)
+                .HasMaxLength(191)
+                .HasColumnName("home_address");
+            entity.Property(e => e.LastName)
+                .HasMaxLength(191)
+                .HasColumnName("last_name");
+            entity.Property(e => e.MobileNumber)
+                .HasColumnType("int(11)")
+                .HasColumnName("mobile_number");
+            entity.Property(e => e.ModifiedAt)
+                .HasColumnType("datetime(3)")
+                .HasColumnName("modified_at");
+            entity.Property(e => e.Password)
+                .HasMaxLength(191)
+                .HasColumnName("password");
+            entity.Property(e => e.Type)
+                .HasDefaultValueSql("'USER'")
+                .HasColumnType("enum('USER','ADMIN')")
+                .HasColumnName("type");
+            entity.Property(e => e.Username)
+                .HasMaxLength(191)
+                .HasColumnName("username");
         });
 
         OnModelCreatingPartial(modelBuilder);

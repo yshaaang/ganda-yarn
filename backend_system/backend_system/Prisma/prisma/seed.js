@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 const main = async () => {
   const product = await createProducts(products);
   const product_attribute = await createProductAttributes(product_attributes);
-  const admin = await createAdmins(admins);
+  const admin = await createUsers(users);
 }
 
 const products = [
@@ -314,23 +314,28 @@ const createProductAttributes = async (productAttributes) => {
   return result;
 }
 
-const admins = [
+const users = [
   {
     username: 'administrator',
-    password: '_6b_r=dOz.3,Ht7Z^F@N',
+    password: 'thisisauniquepassword',
     first_name: 'Christian Roed',
     last_name: 'Boyles',
+    gender: 'Male',
+    mobile_number: 09183579673,
+    home_address: '1313 Santa Clara St. Sampaloc, Manila',
+    email_address: 'chrstnrdbyls@gmail.com',
     created_at: new Date().toISOString(),
-    modified_at: null
+    modified_at: null,
+    type: UserType.ADMIN
   }
 ]
 
-const createAdmins = async (admins) => {
+const createUsers = async (users) => {
   const result = [];
 
-  for (const admin of admins) {
-    const p = await prisma.admin.create({
-      data: admin,
+  for (const user of users) {
+    const p = await prisma.user.create({
+      data: user,
     })
 
     result.push(p);

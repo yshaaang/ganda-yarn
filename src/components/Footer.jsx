@@ -20,9 +20,9 @@ const Footer = () => (
       </div>
 
       <div className='flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10'>
-        {footerLinks.map((footerLink) => (
+        {footerLinks.map((footerLink, idx) => (
           <div
-            key={footerLink.key}
+            key={footerLink.key + " " + idx}
             className='flex flex-col ss:my-0 my-4 min-w-[150opx]'
           >
             <h4 className='font-poppins font-medium text-[18px] leading-[27px] text-white'>

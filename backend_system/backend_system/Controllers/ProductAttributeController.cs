@@ -1,6 +1,5 @@
 ﻿using backend_system.Models;
 using backend_system.Services.ProductAttributeService;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend_system.Controllers

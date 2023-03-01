@@ -1,5 +1,7 @@
 using backend_system.Services.ProductAttributeService;
 using backend_system.Services.ProductService;
+using backend_system.Services.CartService;
+using backend_system.Services.UserService;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,9 +12,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IAdminService, AdminService>();
+builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IProductAttributeService, ProductAttributeService>();
+builder.Services.AddScoped<ICartService, CartService>();
 builder.Services.AddDbContext<GandaYarnDatabaseContext>();
 
 

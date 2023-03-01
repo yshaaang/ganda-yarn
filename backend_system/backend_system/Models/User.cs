@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace backend_system.Models;
 
-public partial class Customer
+public partial class User
 {
     public int Id { get; set; }
 
@@ -26,6 +26,8 @@ public partial class Customer
     public DateTime CreatedAt { get; set; }
 
     public DateTime? ModifiedAt { get; set; }
+
+    public string Type { get; set; } = null!;
 
     public virtual Cart? Cart { get; set; }
 

@@ -1,5 +1,5 @@
 import Layout from './Layout';
-import { Home, About, Contact, Products } from './pages';
+import { Home, About, Contact, Products, Product } from './pages';
 import { Routes, Route } from 'react-router-dom';
 import BaguetteBags from './pages/Product_Categories/BaguetteBags';
 import {
@@ -27,12 +27,17 @@ import {
 import SlideCart from './components/SlideCart';
 import { AdminPage } from './pages/Administrator';
 
+
 const App = () => (
   <div>
     <Routes>
       <Route path='/' element={<Layout />}>
         <Route index element={<Home />} />
         <Route path='products' element={<Products />} />
+        <Route path='product/:id' element={<Product />} /> 
+
+
+        
         <Route path='about' element={<About />} />
         <Route path='contact' element={<Contact />} />
         <Route path='admin_page' element={<AdminPage />} />

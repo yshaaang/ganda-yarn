@@ -7,7 +7,7 @@ public partial class Order
 {
     public int Id { get; set; }
 
-    public int CustomerId { get; set; }
+    public int UserId { get; set; }
 
     public decimal TotalPrice { get; set; }
 
@@ -17,9 +17,9 @@ public partial class Order
 
     public DateTime? ModifiedAt { get; set; }
 
-    public virtual Customer Customer { get; set; } = null!;
-
     public virtual ICollection<OrderProduct> OrderProducts { get; } = new List<OrderProduct>();
 
     public virtual Status StatusCodeNavigation { get; set; } = null!;
+
+    public virtual User User { get; set; } = null!;
 }
