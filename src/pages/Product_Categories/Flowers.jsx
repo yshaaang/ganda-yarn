@@ -7,29 +7,29 @@ import { Flower_MultipleTulipbouquet } from '../../assets/gy_products/Flowers/Tu
 const Flowers = () => {
   return (
     <div className='bg-white w-full overflow-hidden'>
-      <div class='mx-auto max-w-2xl py-4 px-4 sm:py-18 sm:px-6 lg:max-w-7xl lg:px-8'>
-        <h2 class='text-2xl font-bold tracking-tight text-gray-900'>
+      <div className='mx-auto max-w-2xl py-4 px-4 sm:py-18 sm:px-6 lg:max-w-7xl lg:px-8'>
+        <h2 className='text-2xl font-bold tracking-tight text-gray-900'>
           Flower Bouquet
         </h2>
 
-        <div class='mt-6 mb-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
-          <div class='group relative'>
-            <div class='min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none lg:h-80'>
+        <div className='mt-6 mb-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
+          <div className='group relative'>
+            <div className='min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none lg:h-80'>
               <img
                 src={Flower_multiplerosebouquet}
                 alt='Flower Rose'
-                class='h-full w-full object-cover object-center lg:h-full lg:w-full cursor-pointer hover:opacity-75'
+                className='h-full w-full object-cover object-center lg:h-full lg:w-full cursor-pointer hover:opacity-75'
               />
             </div>
-            <div class='mt-4 flex justify-between'>
+            <div className='mt-4 flex justify-between'>
               <div>
-                <h3 class='text-sm text-gray-700'>
+                <h3 className='text-sm text-gray-700'>
                   <a href='#'>
-                    <span aria-hidden='true' class=''></span>
+                    <span aria-hidden='true' className=''></span>
                     Rose Bouquet
                   </a>
                 </h3>
-                <p class='mt-1 text-sm text-gray-500'>Single, Multiple</p>
+                <p className='mt-1 text-sm text-gray-500'>Single, Multiple</p>
               </div>
             </div>
             <div className='card-actions justify-between'>
@@ -55,23 +55,23 @@ const Flowers = () => {
             </div>
           </div>
 
-          <div class='group relative'>
-            <div class='min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none lg:h-80'>
+          <div className='group relative'>
+            <div className='min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none lg:h-80'>
               <img
                 src={flower_multiplesunflowerbouquet}
                 alt='Sunflower Bouquet'
-                class='h-full w-full object-cover object-center lg:h-full lg:w-full cursor-pointer hover:opacity-75'
+                className='h-full w-full object-cover object-center lg:h-full lg:w-full cursor-pointer hover:opacity-75'
               />
             </div>
-            <div class='mt-4 flex justify-between'>
+            <div className='mt-4 flex justify-between'>
               <div>
-                <h3 class='text-sm text-gray-700'>
+                <h3 className='text-sm text-gray-700'>
                   <a href='#'>
-                    <span aria-hidden='true' class=''></span>
+                    <span aria-hidden='true' className=''></span>
                     Sunflower Bouquet
                   </a>
                 </h3>
-                <p class='mt-1 text-sm text-gray-500'>Single, Multiple</p>
+                <p className='mt-1 text-sm text-gray-500'>Single, Multiple</p>
               </div>
             </div>
             <div className='card-actions justify-between'>
@@ -97,23 +97,23 @@ const Flowers = () => {
             </div>
           </div>
 
-          <div class='group relative'>
-            <div class='min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none lg:h-80'>
+          <div className='group relative'>
+            <div className='min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none lg:h-80'>
               <img
                 src={Flower_MultipleTulipbouquet}
                 alt='Tulip Bouquet'
-                class='h-full w-full object-cover object-center lg:h-full lg:w-full cursor-pointer hover:opacity-75'
+                className='h-full w-full object-cover object-center lg:h-full lg:w-full cursor-pointer hover:opacity-75'
               />
             </div>
-            <div class='mt-4 flex justify-between'>
+            <div className='mt-4 flex justify-between'>
               <div>
-                <h3 class='text-sm text-gray-700'>
+                <h3 className='text-sm text-gray-700'>
                   <a href='#'>
-                    <span aria-hidden='true' class=''></span>
+                    <span aria-hidden='true' className=''></span>
                     Tulip Bouquet
                   </a>
                 </h3>
-                <p class='mt-1 text-sm text-gray-500'>Single, Multiple</p>
+                <p className='mt-1 text-sm text-gray-500'>Single, Multiple</p>
               </div>
             </div>
             <div className='card-actions justify-between'>

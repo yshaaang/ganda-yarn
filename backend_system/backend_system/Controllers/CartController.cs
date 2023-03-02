@@ -22,19 +22,31 @@ namespace backend_system.Controllers
             return await _cartService.GetAllCarts();
         }
 
-        //[HttpGet("{id:int}")] {GetCart}
-        //[ProducesResponseType(StatusCodes.Status200OK)]
-        //[ProducesResponseType(StatusCodes.Status404NotFound)]
-        //public async Task<ActionResult<Admin>> GetAdmin(int id)
-        //{
-        //    var result = await _adminService.GetAdmin(id);
-        //    if (result is null)
-        //        return NotFound("Admin doesn't exist.");
+        [HttpGet("{user_id:int}&{product_id:int}&{attribute_id:int}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<Cart>> GetCart(int user_id, int product_id, int attribute_id)
+        {
+            var result = await _cartService.GetCart(user_id, product_id, attribute_id);
+            if (result is null)
+                return NotFound("Cart doesn't exist.");
 
-        //    return Ok(result);
-        //}
+            return Ok(result);
+        }
 
-        [HttpPost("id:int")]
+        [HttpGet("{user_id:int}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<Cart>> GetCartsOfUser(int user_id)
+        {
+            var result = await _cartService.GetCartsOfUser(user_id);
+            if (result is null)
+                return NotFound("User doesn't have products in their cart yet.");
+
+            return Ok(result);
+        }
+
+        [HttpPost("{id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<List<Cart>>> AddCart([FromBody] Cart cart)
         {
@@ -46,9 +58,9 @@ namespace backend_system.Controllers
         [HttpPut]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<List<Cart>>> UpdateCart(int id, [FromBody] Cart request)
+        public async Task<ActionResult<List<Cart>>> UpdateCart(int user_id, int product_id, int attribute_id, [FromBody] Cart request)
         {
-            var result = await _cartService.UpdateCart(id, request);
+            var result = await _cartService.UpdateCart(user_id, product_id, attribute_id, request);
             if (result is null)
                 return NotFound("Cart doesn't exist.");
 
@@ -58,9 +70,9 @@ namespace backend_system.Controllers
         [HttpDelete]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<List<Cart>>> DeleteCart(int id)
+        public async Task<ActionResult<List<Cart>>> DeleteCart(int user_id, int product_id, int attribute_id)
         {
-            var result = await _cartService.DeleteCart(id);
+            var result = await _cartService.DeleteCart(user_id, product_id, attribute_id);
             if (result is null)
                 return NotFound("Cart doesn't exist.");
 

@@ -8,29 +8,29 @@ import {
 const LipBalmHolder = () => {
   return (
     <div className='bg-white w-full overflow-hidden'>
-      <div class='mx-auto max-w-2xl py-4 px-4 sm:py-18 sm:px-6 lg:max-w-7xl lg:px-8'>
-        <h2 class='text-2xl font-bold tracking-tight text-gray-900'>
+      <div className='mx-auto max-w-2xl py-4 px-4 sm:py-18 sm:px-6 lg:max-w-7xl lg:px-8'>
+        <h2 className='text-2xl font-bold tracking-tight text-gray-900'>
           Lip Balm Holder
         </h2>
 
-        <div class='mt-6 mb-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
-          <div class='group relative'>
-            <div class='min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none lg:h-80'>
+        <div className='mt-6 mb-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
+          <div className='group relative'>
+            <div className='min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none lg:h-80'>
               <img
                 src={Chapstickholders_pastel}
                 alt='Lip Balm Holder Pastel'
-                class='h-full w-full object-cover object-center lg:h-full lg:w-full cursor-pointer hover:opacity-75'
+                className='h-full w-full object-cover object-center lg:h-full lg:w-full cursor-pointer hover:opacity-75'
               />
             </div>
-            <div class='mt-4 flex justify-between'>
+            <div className='mt-4 flex justify-between'>
               <div>
-                <h3 class='text-sm text-gray-700'>
+                <h3 className='text-sm text-gray-700'>
                   <a href='#'>
-                    <span aria-hidden='true' class=''></span>
+                    <span aria-hidden='true' className=''></span>
                     Lip Balm Holder in Pastel Shades
                   </a>
                 </h3>
-                <p class='mt-1 text-sm text-gray-500'>
+                <p className='mt-1 text-sm text-gray-500'>
                   Pastel Pink, Pastel Blue, Pastel Green
                 </p>
               </div>
@@ -58,23 +58,23 @@ const LipBalmHolder = () => {
             </div>
           </div>
 
-          <div class='group relative'>
-            <div class='min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none lg:h-80'>
+          <div className='group relative'>
+            <div className='min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none lg:h-80'>
               <img
                 src={Lip_balm_Holder_DarkerShade}
                 alt='Lip Balm Holder in Dark Shades'
-                class='h-full w-full object-cover object-center lg:h-full lg:w-full cursor-pointer hover:opacity-75'
+                className='h-full w-full object-cover object-center lg:h-full lg:w-full cursor-pointer hover:opacity-75'
               />
             </div>
-            <div class='mt-4 flex justify-between'>
+            <div className='mt-4 flex justify-between'>
               <div>
-                <h3 class='text-sm text-gray-700'>
+                <h3 className='text-sm text-gray-700'>
                   <a href='#'>
-                    <span aria-hidden='true' class=''></span>
+                    <span aria-hidden='true' className=''></span>
                     Lip Balm Holder in Dark Shades
                   </a>
                 </h3>
-                <p class='mt-1 text-sm text-gray-500'>
+                <p className='mt-1 text-sm text-gray-500'>
                   Blue, Red, Yellow, Green, Orange, Black
                 </p>
               </div>

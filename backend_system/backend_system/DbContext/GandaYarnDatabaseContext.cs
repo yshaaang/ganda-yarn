@@ -113,7 +113,6 @@ public partial class GandaYarnDatabaseContext : DbContext
             entity.Property(e => e.StatusCode)
                 .HasMaxLength(191)
                 .HasColumnName("status_code");
-            entity.Property(e => e.TotalPrice).HasColumnName("total_price");
             entity.Property(e => e.UserId)
                 .HasColumnType("int(11)")
                 .HasColumnName("user_id");
@@ -149,12 +148,23 @@ public partial class GandaYarnDatabaseContext : DbContext
             entity.Property(e => e.AttributeId)
                 .HasColumnType("int(11)")
                 .HasColumnName("attribute_id");
+            entity.Property(e => e.CreatedAt)
+                .HasColumnType("datetime(3)")
+                .HasColumnName("created_at");
+            entity.Property(e => e.ModifiedAt)
+                .HasColumnType("datetime(3)")
+                .HasColumnName("modified_at");
             entity.Property(e => e.OrderId)
                 .HasColumnType("int(11)")
                 .HasColumnName("order_id");
+            entity.Property(e => e.Price).HasColumnName("price");
             entity.Property(e => e.ProductId)
                 .HasColumnType("int(11)")
                 .HasColumnName("product_id");
+            entity.Property(e => e.Quantity)
+                .HasDefaultValueSql("'1'")
+                .HasColumnType("int(11)")
+                .HasColumnName("quantity");
             entity.Property(e => e.UserId)
                 .HasColumnType("int(11)")
                 .HasColumnName("user_id");
@@ -200,9 +210,6 @@ public partial class GandaYarnDatabaseContext : DbContext
             entity.Property(e => e.PreviewImageLink)
                 .HasMaxLength(191)
                 .HasColumnName("preview_image_link");
-            entity.Property(e => e.QuantitySold)
-                .HasColumnType("int(11)")
-                .HasColumnName("quantity_sold");
         });
 
         modelBuilder.Entity<ProductAttribute>(entity =>
@@ -231,6 +238,9 @@ public partial class GandaYarnDatabaseContext : DbContext
             entity.Property(e => e.ProductId)
                 .HasColumnType("int(11)")
                 .HasColumnName("product_id");
+            entity.Property(e => e.Sold)
+                .HasColumnType("int(11)")
+                .HasColumnName("sold");
             entity.Property(e => e.Stock)
                 .HasColumnType("int(11)")
                 .HasColumnName("stock");
@@ -251,7 +261,9 @@ public partial class GandaYarnDatabaseContext : DbContext
                 .ToTable("review")
                 .UseCollation("utf8mb4_unicode_ci");
 
-            entity.HasIndex(e => e.OrderProductId, "Review_order_product_id_fkey");
+            entity.HasIndex(e => e.OrderProductId, "Review_order_product_id_key").IsUnique();
+
+            entity.HasIndex(e => e.UserId, "Review_user_id_fkey");
 
             entity.Property(e => e.Id)
                 .HasColumnType("int(11)")
@@ -269,10 +281,17 @@ public partial class GandaYarnDatabaseContext : DbContext
             entity.Property(e => e.Rate)
                 .HasColumnType("int(11)")
                 .HasColumnName("rate");
+            entity.Property(e => e.UserId)
+                .HasColumnType("int(11)")
+                .HasColumnName("user_id");
 
-            entity.HasOne(d => d.OrderProduct).WithMany(p => p.Reviews)
-                .HasForeignKey(d => d.OrderProductId)
+            entity.HasOne(d => d.OrderProduct).WithOne(p => p.Review)
+                .HasForeignKey<Review>(d => d.OrderProductId)
                 .HasConstraintName("Review_order_product_id_fkey");
+
+            entity.HasOne(d => d.User).WithMany(p => p.Reviews)
+                .HasForeignKey(d => d.UserId)
+                .HasConstraintName("Review_user_id_fkey");
         });
 
         modelBuilder.Entity<Status>(entity =>

@@ -4,9 +4,9 @@ import QuantitySelector from './QuantitySelector';
 
 const OrderStatus = () => (
   <div className='bg-white w-full overflow-hidden'>
-    <div class='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-      <div class='mx-auto max-w-2xl py-8 sm:py-15 lg:max-w-none lg:py-6'>
-        <h2 class='text-[30px] text-center font-bold text-gray-900'>
+    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+      <div className='mx-auto max-w-2xl py-8 sm:py-15 lg:max-w-none lg:py-6'>
+        <h2 className='text-[30px] text-center font-bold text-gray-900'>
           Order Status
         </h2>
         <div className='mx-auto text-center mt-5'>
@@ -19,10 +19,10 @@ const OrderStatus = () => (
         </div>
 
         <div className='bg-white border border-gray-300 rounded-lg mt-5'>
-          <div class='mx-auto px-4 pt-10 pb-10 '>
+          <div className='mx-auto px-4 pt-10 pb-10 '>
             {/* Description and details  */}
             <div>
-              <h3 class='sr-only'>Items List</h3>
+              <h3 className='sr-only'>Items List</h3>
             </div>
             <div className='mb-10 h-full py-4 border-b border-b-gray-400'>
               <div className='flex justify-between'>
@@ -34,22 +34,22 @@ const OrderStatus = () => (
                 </h2>
               </div>
               {/*Order Summary*/}
-              <div class='mt-6'>
-                <h3 class='sr-only'>Order Summary</h3>
-                <div class='flex items-center'>
+              <div className='mt-6'>
+                <h3 className='sr-only'>Order Summary</h3>
+                <div className='flex items-center'>
                   <div className='container flex justify-between gap-3 border-b border-[#d1d5db] py-4'>
                     <p className='text-[#262626]'>Total (Items)</p>
                     <p className='text-[#262626]'>₱370</p>
                   </div>
                 </div>
-                <div class='flex items-center'>
+                <div className='flex items-center'>
                   <div className='container flex justify-between gap-3 border-b border-[#d1d5db] py-4'>
                     <p className='text-[#262626]'>Shipping Fee</p>
                     <p className='text-[#262626]'>+50</p>
                   </div>
                 </div>
 
-                <div class='flex items-center'>
+                <div className='flex items-center'>
                   <div className='container flex justify-between gap-3 py-4'>
                     <p className='text-[#ff55ee] text-[20px] font-bold'>
                       Order Total

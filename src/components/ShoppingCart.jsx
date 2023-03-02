@@ -6,37 +6,37 @@ import { shoppingCart } from '../constants';
 const ShoppingCart = () => {
   return (
     <div className='bg-white w-full overflow-hidden'>
-      <div class='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-        <div class='mx-auto max-w-2xl py-8 sm:py-15 lg:max-w-none lg:py-6'>
-          <h2 class='text-2xl font-bold text-gray-900'>Shopping Cart</h2>
+      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+        <div className='mx-auto max-w-2xl py-8 sm:py-15 lg:max-w-none lg:py-6'>
+          <h2 className='text-2xl font-bold text-gray-900'>Shopping Cart</h2>
 
           <div className='bg-white border border-gray-300 rounded-lg mt-5'>
-            <div class='mx-auto max-w-2xl px-4 pt-10 pb-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pt-16 lg:pb-10'>
-              <div class='lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8'></div>
+            <div className='mx-auto max-w-2xl px-4 pt-10 pb-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pt-16 lg:pb-10'>
+              <div className='lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8'></div>
 
-              <div class='mt-4 lg:row-span-3 lg:mt-0'>
-                <h2 class='sr-only'>Order Summary</h2>
-                <h1 class='text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl'>
+              <div className='mt-4 lg:row-span-3 lg:mt-0'>
+                <h2 className='sr-only'>Order Summary</h2>
+                <h1 className='text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl'>
                   Order summary
                 </h1>
 
                 {/*Order Summary*/}
-                <div class='mt-6'>
-                  <h3 class='sr-only'>Order Summary</h3>
-                  <div class='flex items-center'>
+                <div className='mt-6'>
+                  <h3 className='sr-only'>Order Summary</h3>
+                  <div className='flex items-center'>
                     <div className='container flex justify-between gap-3 border-b border-[#d1d5db] py-4'>
                       <p className='text-[#262626]'>Total (Items)</p>
                       <p className='text-[#262626]'>₱300</p>
                     </div>
                   </div>
-                  <div class='flex items-center'>
+                  <div className='flex items-center'>
                     <div className='container flex justify-between gap-3 border-b border-[#d1d5db] py-4'>
                       <p className='text-[#262626]'>Shipping Fee</p>
                       <p className='text-[#262626]'>+50</p>
                     </div>
                   </div>
 
-                  <div class='flex items-center'>
+                  <div className='flex items-center'>
                     <div className='container flex justify-between gap-3 py-4'>
                       <p className='text-black text-[20px] font-bold'>
                         Order Total
@@ -51,7 +51,7 @@ const ShoppingCart = () => {
                 <Link to='/checkout_item'>
                   <button
                     type='submit'
-                    class='mt-10 gap-2 flex w-full items-center justify-center rounded-md border border-transparent bg-[#ff55ee] py-3 px-8 text-base font-medium text-white hover:bg-[#3eadcf] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
+                    className='mt-10 gap-2 flex w-full items-center justify-center rounded-md border border-transparent bg-[#ff55ee] py-3 px-8 text-base font-medium text-white hover:bg-[#3eadcf] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
                   >
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
@@ -72,10 +72,10 @@ const ShoppingCart = () => {
                 </Link>
               </div>
 
-              <div class='py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pt-6 lg:pb-16 lg:pr-8'>
+              <div className='py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pt-6 lg:pb-16 lg:pr-8'>
                 {/* Description and details  */}
                 <div>
-                  <h3 class='sr-only'>Items List</h3>
+                  <h3 className='sr-only'>Items List</h3>
                 </div>
 
                 <div className='mt-4'>

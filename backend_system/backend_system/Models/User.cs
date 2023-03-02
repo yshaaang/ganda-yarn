@@ -34,4 +34,6 @@ public partial class User
     public virtual ICollection<OrderProduct> OrderProducts { get; } = new List<OrderProduct>();
 
     public virtual ICollection<Order> Orders { get; } = new List<Order>();
+
+    public virtual ICollection<Review> Reviews { get; } = new List<Review>();
 }

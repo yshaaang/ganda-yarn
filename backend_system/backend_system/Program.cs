@@ -2,6 +2,7 @@ using backend_system.Services.ProductAttributeService;
 using backend_system.Services.ProductService;
 using backend_system.Services.CartService;
 using backend_system.Services.UserService;
+using backend_system.Services.ReviewService;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +17,7 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IProductAttributeService, ProductAttributeService>();
 builder.Services.AddScoped<ICartService, CartService>();
+builder.Services.AddScoped<IReviewService, ReviewService>();
 builder.Services.AddDbContext<GandaYarnDatabaseContext>();
 
 

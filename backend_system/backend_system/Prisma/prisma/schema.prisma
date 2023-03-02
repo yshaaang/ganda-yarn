@@ -15,94 +15,104 @@ enum UserType {
   ADMIN
 }
 
+model User {
+  id       Int    @id @default(autoincrement())
+  username String @unique
+  password String
+
+  first_name String
+  last_name  String
+  gender     String
+
+  mobile_number Int
+  home_address  String
+  email_address String
+
+  created_at  DateTime
+  modified_at DateTime?
+
+  carts          Cart[]
+  orders         Order[]
+  order_products Order_Product[]
+  reviews        Review[]
+  session        Session?
+
+  type UserType @default(USER)
+}
+
 model Product {
   id Int @id @default(autoincrement())
 
-  name String
-  description String @db.LongText
+  name               String
+  description        String @db.LongText
   preview_image_link String
-  quantity_sold Int
 
-  created_at DateTime
+  created_at  DateTime
   modified_at DateTime?
 
-  order_product Order_Product[]
+  order_product     Order_Product[]
   product_attribute Product_Attribute[]
-  carts Cart[]
+  carts             Cart[]
+}
+
+model Status {
+  code        String @id
+  description String @db.LongText
+
+  created_at  DateTime
+  modified_at DateTime?
+
+  orders Order[]
 }
 
 model Product_Attribute {
   id Int @id @default(autoincrement())
 
-  product Product @relation(fields: [product_id], references: [id], onDelete: Cascade)
+  product    Product @relation(fields: [product_id], references: [id], onDelete: Cascade)
   product_id Int
 
-  variant String
+  variant    String
   image_link String
-  price Decimal
-  stock Int
+  price      Decimal
+  sold       Int     @default(0)
+  stock      Int     @default(0)
 
-  created_at DateTime
+  created_at  DateTime
   modified_at DateTime?
 
-  carts Cart[]
+  carts          Cart[]
   order_products Order_Product[]
 }
 
 model Cart {
-  user User @relation(fields: [user_id], references: [id], onDelete: Cascade)
-  user_id Int @unique
+  user    User @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  user_id Int  @unique
 
-  product Product @relation(fields: [product_id], references: [id], onDelete: Cascade)
+  product    Product @relation(fields: [product_id], references: [id], onDelete: Cascade)
   product_id Int
 
   product_attribute Product_Attribute @relation(fields: [attribute_id], references: [id], onDelete: Cascade)
-  attribute_id Int
+  attribute_id      Int
 
-  quantity Int
+  quantity    Int
   total_price Decimal
 
-  created_at DateTime
+  created_at  DateTime
   modified_at DateTime?
 
   @@id([user_id, product_id, attribute_id])
 }
 
-model User {
-  id Int @id @default(autoincrement())
-  username String @unique
-  password String
-  
-  first_name String
-  last_name String
-  gender String
-
-  mobile_number Int
-  home_address String
-  email_address String
-
-  created_at DateTime
-  modified_at DateTime?
-
-  carts Cart[]
-  orders Order[]
-  order_products Order_Product[]
-
-  type UserType @default(USER)
-}
-
 model Order {
   id Int @id @default(autoincrement())
-  
-  user User @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  user    User @relation(fields: [user_id], references: [id], onDelete: Cascade)
   user_id Int
 
-  total_price Decimal
-  
-  status Status @relation(fields: [status_code], references: [code], onDelete: Cascade)
+  status      Status @relation(fields: [status_code], references: [code], onDelete: Cascade)
   status_code String
 
-  created_at DateTime
+  created_at  DateTime
   modified_at DateTime?
 
   order_products Order_Product[]
@@ -111,40 +121,46 @@ model Order {
 model Order_Product {
   id Int @id @default(autoincrement())
 
-  order Order @relation(fields: [order_id], references: [id], onDelete: Cascade)
+  order    Order @relation(fields: [order_id], references: [id], onDelete: Cascade)
   order_id Int
 
-  user User @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  user    User @relation(fields: [user_id], references: [id], onDelete: Cascade)
   user_id Int
 
-  product Product @relation(fields: [product_id], references: [id], onDelete: Cascade)
+  product    Product @relation(fields: [product_id], references: [id], onDelete: Cascade)
   product_id Int
 
   product_attribute Product_Attribute @relation(fields: [attribute_id], references: [id], onDelete: Cascade)
-  attribute_id Int
+  attribute_id      Int
 
-  reviews Review[]
+  quantity Int     @default(1)
+  price    Decimal
+
+  created_at  DateTime
+  modified_at DateTime?
+
+  review Review?
 }
 
 model Review {
   id Int @id @default(autoincrement())
 
-  order_product Order_Product @relation(fields: [order_product_id], references: [id], onDelete: Cascade)
-  order_product_id Int
+  order_product    Order_Product @relation(fields: [order_product_id], references: [id], onDelete: Cascade)
+  order_product_id Int           @unique
 
-  rate Int
+  user    User @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  user_id Int
+
+  rate    Int
   comment String @db.LongText
-  
-  created_at DateTime
+
+  created_at  DateTime
   modified_at DateTime?
 }
 
-model Status{
-  code String @id
-  description String @db.LongText
+model Session {
+  id Int @id @default(autoincrement())
 
-  created_at DateTime
-  modified_at DateTime?
-
-  orders Order[]
+  user    User @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  user_id Int  @unique
 }

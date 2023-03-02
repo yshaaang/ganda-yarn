@@ -15,13 +15,21 @@ public partial class OrderProduct
 
     public int AttributeId { get; set; }
 
+    public int Quantity { get; set; }
+
+    public decimal Price { get; set; }
+
+    public DateTime CreatedAt { get; set; }
+
+    public DateTime? ModifiedAt { get; set; }
+
     public virtual ProductAttribute Attribute { get; set; } = null!;
 
     public virtual Order Order { get; set; } = null!;
 
     public virtual Product Product { get; set; } = null!;
 
-    public virtual ICollection<Review> Reviews { get; } = new List<Review>();
+    public virtual Review? Review { get; set; }
 
     public virtual User User { get; set; } = null!;
 }

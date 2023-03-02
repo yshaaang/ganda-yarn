@@ -9,8 +9,6 @@ public partial class Order
 
     public int UserId { get; set; }
 
-    public decimal TotalPrice { get; set; }
-
     public string StatusCode { get; set; } = null!;
 
     public DateTime CreatedAt { get; set; }

@@ -13,8 +13,6 @@ public partial class Product
 
     public string PreviewImageLink { get; set; } = null!;
 
-    public int QuantitySold { get; set; }
-
     public DateTime CreatedAt { get; set; }
 
     public DateTime? ModifiedAt { get; set; }

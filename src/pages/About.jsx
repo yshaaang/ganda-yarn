@@ -10,10 +10,10 @@ const About = () => {
     <section id='ABOUT' className='bg-[#dbf1fe] w-full overflow-hidden'>
       <div className='mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8'>
         <div
-          class={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
+          className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
         >
-          <h2 class='text-2xl font-bold text-gray-900 mb-5'>About Us</h2>
-          <p class='text-poppins text-regular text-black text-justify mb-5'>
+          <h2 className='text-2xl font-bold text-gray-900 mb-5'>About Us</h2>
+          <p className='text-poppins text-regular text-black text-justify mb-5'>
             Welcome to our Ganda Yarn! We're a team of passionate artisans who
             believe that every product should be made with care and attention to
             detail. Our crochet products are crafted using high-quality
@@ -28,11 +28,11 @@ const About = () => {
           </p>
           <div id='about-2'>
             <div className='content-box-lg'>
-              <div class='row'>
-                <div class='col-md-4'>
-                  <div class='about-item text-center'>
+              <div className='row'>
+                <div className='col-md-4'>
+                  <div className='about-item text-center'>
                     <GrWorkshop className='icons' />
-                    <h3 class='text-poppins text-regular text-[#3eadcf]'>
+                    <h3 className='text-poppins text-regular text-[#3eadcf]'>
                       MISSION
                     </h3>
                     <p className='text-poppins text-regular text-black text-justify'>
@@ -53,10 +53,10 @@ const About = () => {
                     </p>
                   </div>
                 </div>
-                <div class='col-md-4'>
-                  <div class='about-item text-center'>
+                <div className='col-md-4'>
+                  <div className='about-item text-center'>
                     <GrGlobe className='icons' />
-                    <h3 class='text-poppins text-regular text-[#3eadcf]'>
+                    <h3 className='text-poppins text-regular text-[#3eadcf]'>
                       VISION
                     </h3>
 
@@ -78,13 +78,13 @@ const About = () => {
                     </p>
                   </div>
                 </div>
-                <div class='col-md-4'>
-                  <div class='about-item text-center'>
+                <div className='col-md-4'>
+                  <div className='about-item text-center'>
                     <h3>
                       {' '}
                       <GrAchievement className='icons' />
                     </h3>
-                    <h3 class='text-poppins text-regular text-[#3eadcf]'>
+                    <h3 className='text-poppins text-regular text-[#3eadcf]'>
                       ACHIEVEMENTS
                     </h3>
 

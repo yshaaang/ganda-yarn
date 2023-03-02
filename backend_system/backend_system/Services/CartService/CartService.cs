@@ -21,9 +21,9 @@ namespace backend_system.Services.CartService
             return await _context.Carts.ToListAsync();
         }
 
-        public async Task<List<Cart>?> DeleteCart(int id)
+        public async Task<List<Cart>?> DeleteCart(int user_id, int product_id, int attribute_id)
         {
-            var cart = await _context.Carts.FindAsync(id);
+            var cart = await _context.Carts.Where(cart => cart.UserId == user_id && cart.ProductId == product_id && cart.AttributeId == attribute_id).FirstOrDefaultAsync();
             if (cart is null)
                 return null;
 
@@ -40,11 +40,23 @@ namespace backend_system.Services.CartService
             return carts;
         }
 
-        //GetCart
-
-        public async Task<List<Cart>?> UpdateCart(int id, Cart request)
+        public async Task<Cart?> GetCart(int user_id, int product_id, int attribute_id)
         {
-            var cart = await _context.Carts.FindAsync(id);
+            var cart = await _context.Carts.Where(cart => cart.UserId == user_id && cart.ProductId == product_id && cart.AttributeId == attribute_id).Include(cart => cart.User).Include(cart => cart.Product).Include(cart => cart.Attribute).FirstOrDefaultAsync();
+
+            return cart;
+        }
+
+        public async Task<List<Cart>?> GetCartsOfUser(int user_id)
+        {
+            var carts = await _context.Carts.Where(cart => cart.UserId == user_id).Include(cart => cart.User).Include(cart => cart.Product).Include(cart => cart.Attribute).ToListAsync();
+
+            return carts;
+        }
+
+        public async Task<List<Cart>?> UpdateCart(int user_id, int product_id, int attribute_id, Cart request)
+        {
+            var cart = await _context.Carts.Where(cart => cart.UserId == user_id && cart.ProductId == product_id && cart.AttributeId == attribute_id).Include(cart => cart.User).Include(cart => cart.Product).Include(cart => cart.Attribute).FirstOrDefaultAsync();
             if (cart is null)
                 return null;
 

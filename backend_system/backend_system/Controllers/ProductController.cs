@@ -34,7 +34,7 @@ namespace backend_system.Controllers
             return Ok(result);
         }
 
-        [HttpPost("id:int")]
+        [HttpPost("{id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<List<Product>>> AddProduct([FromBody] Product product)
         {

@@ -3,13 +3,13 @@ import React from 'react';
 const CRUD = () => {
   return (
     <div className='bg-white w-full overflow-hidden'>
-      <div class='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-        <div class='mx-auto max-w-2xl py-8 sm:py-15 lg:max-w-none lg:py-6'>
-          <h2 class='text-[30px] text-center font-bold text-gray-900'>
+      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+        <div className='mx-auto max-w-2xl py-8 sm:py-15 lg:max-w-none lg:py-6'>
+          <h2 className='text-[30px] text-center font-bold text-gray-900'>
             Database
           </h2>
           <div className=''>
-            <div class='mx-auto px-4 pt-10 pb-10 '>
+            <div className='mx-auto px-4 pt-10 pb-10 '>
               <div className='overflow-x-auto'>
                 <table className='table table-compact w-full'>
                   <thead>

@@ -57,7 +57,6 @@ namespace backend_system.Services.ProductService
             product.Name = request.Name;
             product.Description = request.Description;
             product.PreviewImageLink = request.PreviewImageLink;
-            product.QuantitySold = request.QuantitySold;
             product.ModifiedAt = DateTime.Now;
 
             await _context.SaveChangesAsync();

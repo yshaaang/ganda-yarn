@@ -34,7 +34,7 @@ namespace backend_system.Controllers
             return Ok(result);
         }
 
-        [HttpPost("id:int")]
+        [HttpPost("{id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<List<User>>> AddUser([FromBody] User user)
         {
@@ -55,7 +55,7 @@ namespace backend_system.Controllers
             return Ok(result);
         }
 
-        [HttpDelete]
+        [HttpDelete("{id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<List<User>>> DeleteUser(int id)

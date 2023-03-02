@@ -203,7 +203,7 @@ export default function baguetteBagsOverview() {
 
               <button
                 type='submit'
-                class='mt-10 gap-2 flex w-full items-center justify-center rounded-md border border-transparent bg-[#ff55ee] py-3 px-8 text-base font-medium text-white hover:bg-[#3eadcf] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
+                className='mt-10 gap-2 flex w-full items-center justify-center rounded-md border border-transparent bg-[#ff55ee] py-3 px-8 text-base font-medium text-white hover:bg-[#3eadcf] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -256,12 +256,12 @@ export default function baguetteBagsOverview() {
 
         {/** Customer Reviews */}
         <div className='bg-[#dbf1fe]'>
-          <div class='mx-auto max-w-2xl px-4 pt-10 pb-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pt-16 lg:pb-10'>
-            <div class='lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8'></div>
+          <div className='mx-auto max-w-2xl px-4 pt-10 pb-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pt-16 lg:pb-10'>
+            <div className='lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8'></div>
             {/*Options*/}
-            <div class='mt-4 lg:row-span-3 lg:mt-0'>
-              <h2 class='sr-only'>Customer Reviews</h2>
-              <h1 class='text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl'>
+            <div className='mt-4 lg:row-span-3 lg:mt-0'>
+              <h2 className='sr-only'>Customer Reviews</h2>
+              <h1 className='text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl'>
                 Customer Reviews
               </h1>
 
@@ -320,16 +320,16 @@ export default function baguetteBagsOverview() {
               </div>
               <button
                 type='submit'
-                class='mt-10 gap-2 flex w-full items-center justify-center rounded-md border border-transparent bg-[#ff55ee] py-3 px-8 text-base font-medium text-white hover:bg-[#3eadcf] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
+                className='mt-10 gap-2 flex w-full items-center justify-center rounded-md border border-transparent bg-[#ff55ee] py-3 px-8 text-base font-medium text-white hover:bg-[#3eadcf] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
               >
                 Submit Review
               </button>
             </div>
 
-            <div class='py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pt-6 lg:pb-16 lg:pr-8'>
+            <div className='py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pt-6 lg:pb-16 lg:pr-8'>
               {/* Description and details  */}
               <div>
-                <h3 class='sr-only'>Reviews List</h3>
+                <h3 className='sr-only'>Reviews List</h3>
 
                 <div className='avatar-container flex gap-3 border-b border-[#d1d5db] py-5'>
                   <div>
