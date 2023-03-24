@@ -1,4 +1,5 @@
-﻿using backend_system.Models;
+﻿using backend_system.Helper;
+using backend_system.Models;
 using backend_system.Services.ReviewService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -10,10 +11,12 @@ namespace backend_system.Controllers
     public class ReviewController : ControllerBase
     {
         private readonly IReviewService _reviewService;
+        private readonly GandaYarnDatabaseContext _context;
 
-        public ReviewController(IReviewService reviewService)
+        public ReviewController(IReviewService reviewService, GandaYarnDatabaseContext context)
         {
             _reviewService = reviewService;
+            _context = context;
         }
 
         [HttpGet]
@@ -26,7 +29,7 @@ namespace backend_system.Controllers
         [HttpGet("{id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Review>> GetReview(int id)
+        public async Task<ActionResult<Review>> GetReview(string id)
         {
             var result = await _reviewService.GetReview(id);
             if (result is null)
@@ -38,17 +41,24 @@ namespace backend_system.Controllers
         [HttpGet("Product/{product_id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<List<Review>>> GetReviewsOfProduct(int product_id)
+        public async Task<ActionResult<List<Review>>> GetReviewsOfProduct(string product_id)
         {
             var result = await _reviewService.GetReviewsOfProduct(product_id);
 
             return Ok(result);
         }
 
-        [HttpPost("{id:int}")]
+        [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<List<Review>>> AddReview([FromBody] Review review)
+        public async Task<ActionResult<Review?>> AddReview([FromHeader] string? session_id, [FromBody] ReviewInput review)
         {
+            var user = await SessionHelper.GetUserFromSession(_context, session_id);
+
+            if (user == null)
+            {
+                return NotFound("User not found");
+            }
+
             var result = await _reviewService.AddReview(review);
 
             return Ok(result);
@@ -57,7 +67,7 @@ namespace backend_system.Controllers
         [HttpPut]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<List<Review>>> UpdateReview(int id, [FromBody] Review request)
+        public async Task<ActionResult<List<Review>>> UpdateReview(string id, [FromBody] ReviewInput request)
         {
             var result = await _reviewService.UpdateReview(id, request);
             if (result is null)
@@ -69,7 +79,7 @@ namespace backend_system.Controllers
         [HttpDelete]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<List<Review>>> DeleteReview(int id)
+        public async Task<ActionResult<List<Review>>> DeleteReview(string id)
         {
             var result = await _reviewService.DeleteReview(id);
             if (result is null)

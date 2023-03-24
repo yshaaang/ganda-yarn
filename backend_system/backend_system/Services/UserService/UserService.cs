@@ -12,12 +12,74 @@ namespace backend_system.Services.UserService
             _context = context;
         }
 
-        public async Task<List<User>> AddUser(User user)
+        public async Task<Session?> AddUser(UserInput request)
         {
-            _context.Users.Add(user);
+            var existingUsername = await _context.Users.Where(existing => existing.Username == request.Username).FirstOrDefaultAsync();
+
+            if (existingUsername != null)
+            {
+                return null;
+            }
+
+            var user = new User()
+            {
+                Id = Guid.NewGuid().ToString(),
+                FirstName = request.FirstName,
+                LastName = request.LastName,
+                Gender = request.Gender,
+                MobileNumber = request.MobileNumber,
+                HomeAddress = request.HomeAddress,
+                EmailAddress = request.EmailAddress,
+                Username = request.Username,
+                Password = request.Password,
+                CreatedAt = DateTime.UtcNow,
+            };
+
+            await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
 
-            return await _context.Users.ToListAsync();
+            var session = new Session()
+            {
+                Id = Guid.NewGuid().ToString(),
+                User = user,
+                UserId = user.Id
+            };
+
+            await _context.Sessions.AddAsync(session);
+            await _context.SaveChangesAsync();
+
+            return session;
+        }
+
+        public async Task<Session> GetLogin(string username, string password)
+        {
+            var user = await _context.Users
+                .Where(user => user.Username == username && user.Password == password)
+                .Include(user => user.Session)
+                .FirstOrDefaultAsync();
+
+            if (user == null)
+            {
+                return null;
+            }
+
+            if (user.Session != null) {
+                Console.WriteLine(user.Session.Id);
+                //await _context.Sessions.Where(session => session.Id == user.Session.Id).ExecuteDeleteAsync();
+            }
+            await _context.SaveChangesAsync();
+
+            var session = new Session()
+            {
+                Id = Guid.NewGuid().ToString(),
+                User = user,
+                UserId = user.Id
+            };
+
+            await _context.Sessions.AddAsync(session);
+            await _context.SaveChangesAsync();
+
+            return session;
         }
 
         public async Task<List<User>?> DeleteUser(int id)
@@ -68,6 +130,21 @@ namespace backend_system.Services.UserService
             await _context.SaveChangesAsync();
 
             return await _context.Users.ToListAsync();
+        }
+
+        public class UserInput
+        {
+            public string FirstName { get; set; }
+
+            public string LastName { get; set; }
+
+            public string Gender { get; set; }
+
+            public string MobileNumber { get; set; }
+            public string HomeAddress { get; set; }
+            public string EmailAddress { get; set; }
+            public string Username { get; set; }
+            public string Password { get; set; }
         }
     }
 }

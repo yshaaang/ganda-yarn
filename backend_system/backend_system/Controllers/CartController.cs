@@ -1,6 +1,9 @@
-﻿using backend_system.Models;
+﻿using backend_system.Helper;
+using backend_system.Models;
 using backend_system.Services.CartService;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.WebUtilities;
+using static backend_system.Services.CartService.CartService;
 
 namespace backend_system.Controllers
 {
@@ -9,13 +12,15 @@ namespace backend_system.Controllers
     public class CartController : ControllerBase
     {
         private readonly ICartService _cartService;
+        private readonly GandaYarnDatabaseContext _context;
 
-        public CartController(ICartService cartService)
+        public CartController(ICartService cartService, GandaYarnDatabaseContext context)
         {
             _cartService = cartService;
+            _context = context;
         }
 
-        [HttpGet]
+        [HttpGet("all")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<List<Cart>>> GetAllCarts()
         {
@@ -25,7 +30,7 @@ namespace backend_system.Controllers
         [HttpGet("{user_id:int}&{product_id:int}&{attribute_id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Cart>> GetCart(int user_id, int product_id, int attribute_id)
+        public async Task<ActionResult<Cart>> GetCart(string user_id, string product_id, string attribute_id)
         {
             var result = await _cartService.GetCart(user_id, product_id, attribute_id);
             if (result is null)
@@ -34,23 +39,37 @@ namespace backend_system.Controllers
             return Ok(result);
         }
 
-        [HttpGet("{user_id:int}")]
+        [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Cart>> GetCartsOfUser(int user_id)
+        public async Task<ActionResult<List<Cart>>> GetCartsOfUser([FromHeader] string? session_id)
         {
-            var result = await _cartService.GetCartsOfUser(user_id);
+            var user = await SessionHelper.GetUserFromSession(_context, session_id);
+
+            if (user == null) {
+                return NotFound("User not found");
+            }
+
+            var result = await _cartService.GetCartsOfUser(user.Id);
+
             if (result is null)
                 return NotFound("User doesn't have products in their cart yet.");
 
             return Ok(result);
         }
 
-        [HttpPost("{id:int}")]
+        [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<List<Cart>>> AddCart([FromBody] Cart cart)
+        public async Task<ActionResult<List<Cart>>> AddCart([FromBody] CartInput request, [FromHeader] string? session_id)
         {
-            var result = await _cartService.AddCart(cart);
+            var user = await SessionHelper.GetUserFromSession(_context, session_id);
+
+            if (user == null)
+            {
+                return NotFound("User not found");
+            }
+
+            var result = await _cartService.AddCart(request);
 
             return Ok(result);
         }
@@ -58,21 +77,45 @@ namespace backend_system.Controllers
         [HttpPut]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<List<Cart>>> UpdateCart(int user_id, int product_id, int attribute_id, [FromBody] Cart request)
+        public async Task<ActionResult<List<Cart>>> UpdateCart([FromHeader] string? session_id, [FromBody] CartInput request)
         {
-            var result = await _cartService.UpdateCart(user_id, product_id, attribute_id, request);
+            var user = await SessionHelper.GetUserFromSession(_context, session_id);
+
+            if (user == null)
+            {
+                return NotFound("User not found");
+            }
+
+            if (user.Id != request.UserId)
+            {
+                return NotFound("User not found");
+            }
+
+            var result = await _cartService.UpdateCart(request);
             if (result is null)
                 return NotFound("Cart doesn't exist.");
 
             return Ok(result);
         }
 
-        [HttpDelete]
+        [HttpPost("delete")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<List<Cart>>> DeleteCart(int user_id, int product_id, int attribute_id)
+        public async Task<ActionResult<List<Cart>>> DeleteCart([FromHeader] string? session_id, CartInput request)
         {
-            var result = await _cartService.DeleteCart(user_id, product_id, attribute_id);
+            var user = await SessionHelper.GetUserFromSession(_context, session_id);
+
+            if (user == null)
+            {
+                return NotFound("User not found");
+            }
+
+            if (user.Id != request.UserId)
+            {
+                return NotFound("User not found");
+            }
+            
+            var result = await _cartService.DeleteCart(request);
             if (result is null)
                 return NotFound("Cart doesn't exist.");
 

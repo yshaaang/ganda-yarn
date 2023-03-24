@@ -5,7 +5,7 @@ namespace backend_system.Models;
 
 public partial class Product
 {
-    public int Id { get; set; }
+    public string Id { get; set; } = null!;
 
     public string Name { get; set; } = null!;
 

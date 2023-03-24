@@ -8,7 +8,7 @@
     "reset-db": "npm run generate && npx prisma db push --force-reset && npm run seed",
     "reset-generate": "npm run reset-db && npm run generate-cs",
     "generate": "npx prisma generate",
-    "generate-cs": "cd .. && dotnet ef dbcontext scaffold \"server=localhost;port=3306;database=ganda-yarn;uid=admin;password=admin\" Pomelo.EntityFrameworkCore.MySql --context-dir DbContext --context GandaYarnDatabaseContext --output-dir Models --force"
+    "generate-cs": "cd .. && dotnet ef dbcontext scaffold \"server=localhost;port=3306;database=ganda-yarn;uid=comsci_dbms;password=3sh_ComSc1DBMS\" Pomelo.EntityFrameworkCore.MySql --context-dir DbContext --context GandaYarnDatabaseContext --output-dir Models --force"
   },
   "prisma": {
     "seed": "node prisma/seed.js"
@@ -21,7 +21,7 @@
     "prisma": "^4.10.1"
   },
   "dependencies": {
-    "@prisma/client": "^4.10.1",
+    "@prisma/client": "^4.11.0",
     "luxon": "^3.2.1"
   }
 }

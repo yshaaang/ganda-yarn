@@ -20,7 +20,7 @@ namespace backend_system.Services.ProductService
             return await _context.Products.ToListAsync();
         }
 
-        public async Task<List<Product>?> DeleteProduct(int id)
+        public async Task<List<Product>?> DeleteProduct(string id)
         {
             var product = await _context.Products.FindAsync(id);
             if (product is null)
@@ -39,7 +39,7 @@ namespace backend_system.Services.ProductService
             return products;
         }
 
-        public async Task<Product?> GetProduct(int id)
+        public async Task<Product?> GetProduct(string id)
         {
             var product = await _context.Products.Where(product => product.Id == id).Include(product => product.ProductAttributes).FirstOrDefaultAsync();
             if (product is null)
@@ -48,7 +48,7 @@ namespace backend_system.Services.ProductService
             return product;
         }
 
-        public async Task<List<Product>?> UpdateProduct(int id, Product request)
+        public async Task<List<Product>?> UpdateProduct(string id, Product request)
         {
             var product = await _context.Products.FindAsync(id);
             if (product is null)

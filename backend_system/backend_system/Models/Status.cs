@@ -9,6 +9,8 @@ public partial class Status
 
     public string Description { get; set; } = null!;
 
+    public int Order { get; set; }
+
     public DateTime CreatedAt { get; set; }
 
     public DateTime? ModifiedAt { get; set; }

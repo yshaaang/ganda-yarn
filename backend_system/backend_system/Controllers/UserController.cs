@@ -1,6 +1,7 @@
 ﻿using backend_system.Models;
 using backend_system.Services.UserService;
 using Microsoft.AspNetCore.Mvc;
+using static backend_system.Services.UserService.UserService;
 
 namespace backend_system.Controllers
 {
@@ -22,6 +23,13 @@ namespace backend_system.Controllers
             return await _userService.GetAllUsers();
         }
 
+        [HttpGet("{username}&{password}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult<Session>> GetLogin(string username, string password)
+        {
+            return await _userService.GetLogin(username, password);
+        }
+
         [HttpGet("{id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -34,11 +42,11 @@ namespace backend_system.Controllers
             return Ok(result);
         }
 
-        [HttpPost("{id:int}")]
+        [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<List<User>>> AddUser([FromBody] User user)
+        public async Task<ActionResult<Session?>> AddUser([FromBody] UserInput request)
         {
-            var result = await _userService.AddUser(user);
+            var result = await _userService.AddUser(request);
 
             return Ok(result);
         }

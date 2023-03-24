@@ -5,9 +5,19 @@ namespace backend_system.Models;
 
 public partial class Order
 {
-    public int Id { get; set; }
+    public string Id { get; set; } = null!;
 
-    public int UserId { get; set; }
+    public string UserId { get; set; } = null!;
+
+    public string FirstName { get; set; } = null!;
+
+    public string LastName { get; set; } = null!;
+
+    public string MobileNumber { get; set; } = null!;
+
+    public string HomeAddress { get; set; } = null!;
+
+    public string EmailAddress { get; set; } = null!;
 
     public string StatusCode { get; set; } = null!;
 

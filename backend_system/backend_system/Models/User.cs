@@ -5,7 +5,7 @@ namespace backend_system.Models;
 
 public partial class User
 {
-    public int Id { get; set; }
+    public string Id { get; set; } = null!;
 
     public string Username { get; set; } = null!;
 
@@ -17,7 +17,7 @@ public partial class User
 
     public string Gender { get; set; } = null!;
 
-    public int MobileNumber { get; set; }
+    public string MobileNumber { get; set; } = null!;
 
     public string HomeAddress { get; set; } = null!;
 
@@ -29,11 +29,13 @@ public partial class User
 
     public string Type { get; set; } = null!;
 
-    public virtual Cart? Cart { get; set; }
+    public virtual ICollection<Cart> Carts { get; } = new List<Cart>();
 
     public virtual ICollection<OrderProduct> OrderProducts { get; } = new List<OrderProduct>();
 
     public virtual ICollection<Order> Orders { get; } = new List<Order>();
 
     public virtual ICollection<Review> Reviews { get; } = new List<Review>();
+
+    public virtual Session? Session { get; set; }
 }

@@ -84,3 +84,175 @@ E:\Code\Git\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Prisma\pac
 E:\Code\Git\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Prisma\package.json
 E:\Code\Git\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\MySqlConnector.dll
 E:\Code\Git\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\appsettings.json
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Prisma\package-lock.json
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Prisma\package.json
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\backend_system.exe
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\backend_system.deps.json
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\backend_system.runtimeconfig.json
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\backend_system.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\backend_system.pdb
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Humanizer.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.Web.Cors.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.Net.Http.Formatting.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.Web.Http.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.Web.Http.Cors.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\MySqlConnector.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\backend_system.csproj.AssemblyReference.cache
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\backend_system.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\backend_system.AssemblyInfoInputs.cache
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\backend_system.AssemblyInfo.cs
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\backend_system.csproj.CoreCompileInputs.cache
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\backend_system.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\backend_system.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\staticwebassets\msbuild.backend_system.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\staticwebassets\msbuild.build.backend_system.props
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.backend_system.props
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.backend_system.props
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\scopedcss\bundle\backend_system.styles.css
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\backend_system.csproj.CopyComplete
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\backend_system.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\refint\backend_system.dll
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\backend_system.pdb
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\backend_system.genruntimeconfig.cache
+C:\Users\Robin\Desktop\Programming\Test3\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\ref\backend_system.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\appsettings.Development.json
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\appsettings.json
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Prisma\package-lock.json
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Prisma\package.json
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\backend_system.exe
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\backend_system.deps.json
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\backend_system.runtimeconfig.json
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\backend_system.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\backend_system.pdb
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Azure.Core.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Azure.Identity.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Humanizer.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.Web.Cors.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.Net.Http.Formatting.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.Web.Http.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.Web.Http.Cors.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.OpenApi.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Mono.TextTemplating.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\MySqlConnector.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.CodeDom.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.Drawing.Common.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.Memory.Data.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.Runtime.Caching.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.Security.Permissions.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\System.Windows.Extensions.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\backend_system.csproj.AssemblyReference.cache
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\backend_system.GeneratedMSBuildEditorConfig.editorconfig
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\backend_system.AssemblyInfoInputs.cache
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\backend_system.AssemblyInfo.cs
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\backend_system.csproj.CoreCompileInputs.cache
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\backend_system.MvcApplicationPartsAssemblyInfo.cs
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\backend_system.MvcApplicationPartsAssemblyInfo.cache
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\staticwebassets\msbuild.backend_system.Microsoft.AspNetCore.StaticWebAssets.props
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\staticwebassets\msbuild.build.backend_system.props
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.backend_system.props
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.backend_system.props
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\staticwebassets.pack.json
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\staticwebassets.build.json
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\staticwebassets.development.json
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\scopedcss\bundle\backend_system.styles.css
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\backend_system.csproj.CopyComplete
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\backend_system.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\refint\backend_system.dll
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\backend_system.pdb
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\backend_system.genruntimeconfig.cache
+D:\MARJUN\Documents\Trisha\Coding\3rd Year\test (1)\ganda-yarn\backend_system\backend_system\obj\Debug\net7.0\ref\backend_system.dll

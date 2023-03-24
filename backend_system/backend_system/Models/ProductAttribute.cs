@@ -5,9 +5,9 @@ namespace backend_system.Models;
 
 public partial class ProductAttribute
 {
-    public int Id { get; set; }
+    public string Id { get; set; } = null!;
 
-    public int ProductId { get; set; }
+    public string ProductId { get; set; } = null!;
 
     public string Variant { get; set; } = null!;
 

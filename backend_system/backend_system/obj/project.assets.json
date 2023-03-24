@@ -8488,24 +8488,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Pc\\.nuget\\packages\\": {},
-    "F:\\Program Files\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\MARJUN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Code\\Git\\ganda-yarn\\backend_system\\backend_system\\backend_system.csproj",
+      "projectUniqueName": "D:\\MARJUN\\Documents\\Trisha\\Coding\\3rd Year\\test (1)\\ganda-yarn\\backend_system\\backend_system\\backend_system.csproj",
       "projectName": "backend_system",
-      "projectPath": "E:\\Code\\Git\\ganda-yarn\\backend_system\\backend_system\\backend_system.csproj",
-      "packagesPath": "C:\\Users\\Pc\\.nuget\\packages\\",
-      "outputPath": "E:\\Code\\Git\\ganda-yarn\\backend_system\\backend_system\\obj\\",
+      "projectPath": "D:\\MARJUN\\Documents\\Trisha\\Coding\\3rd Year\\test (1)\\ganda-yarn\\backend_system\\backend_system\\backend_system.csproj",
+      "packagesPath": "C:\\Users\\MARJUN\\.nuget\\packages\\",
+      "outputPath": "D:\\MARJUN\\Documents\\Trisha\\Coding\\3rd Year\\test (1)\\ganda-yarn\\backend_system\\backend_system\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "F:\\Program Files\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\MARJUN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8513,7 +8508,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -8588,7 +8582,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   },

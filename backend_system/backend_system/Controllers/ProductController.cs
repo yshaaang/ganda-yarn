@@ -25,7 +25,7 @@ namespace backend_system.Controllers
         [HttpGet("{id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Product>> GetProduct(int id)
+        public async Task<ActionResult<Product>> GetProduct(string id)
         {
             var result = await _productService.GetProduct(id);
             if (result is null)
@@ -46,7 +46,7 @@ namespace backend_system.Controllers
         [HttpPut]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<List<Product>>> UpdateProduct(int id, [FromBody] Product request)
+        public async Task<ActionResult<List<Product>>> UpdateProduct(string id, [FromBody] Product request)
         {
             var result = await _productService.UpdateProduct(id, request);
             if (result is null)
@@ -58,7 +58,7 @@ namespace backend_system.Controllers
         [HttpDelete]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<List<Product>>> DeleteProduct(int id)
+        public async Task<ActionResult<List<Product>>> DeleteProduct(string id)
         {
             var result = await _productService.DeleteProduct(id);
             if (result is null)
